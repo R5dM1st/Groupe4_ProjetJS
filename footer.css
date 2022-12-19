@@ -19,13 +19,13 @@ background-color: lightgray;
 }
 #footer-lieu a{
 color: black;
-padding: 40px;
+padding: 20px;
 padding-top: 10%;
 text-decoration : none;
 
 }
 #footer-lieu a:hover{
-color : lightgreen;
+color : white;
 }
 
 .modal {
