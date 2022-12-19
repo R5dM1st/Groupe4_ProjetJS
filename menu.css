@@ -34,12 +34,16 @@ nav a{
     color: black;
     border-bottom: 2px solid transparent;
     padding: 10px 0px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 nav a:hover{
-    color: black;
-    border-bottom: 2px solid olivedrab;
-    background-color: lightgreen;
+    background-color: #666666;
+    box-shadow: 2px 4px #999999;
+    color: white;
 }
 
 .sous{
