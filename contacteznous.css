@@ -1,0 +1,33 @@
+#prenom{
+    height: 30px;
+    border-radius: 5px;
+    background-image:url(image/person.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 16px;
+    padding-left: 25px;
+}
+#mail{
+    height: 30px;
+    border-radius: 5px;
+    background-image:url(image/email.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 16px;
+    padding-left: 25px;
+}
+#message{
+    width: 500px;
+
+    border-radius: 5px;
+}
+
+#valider{
+    background-color: #747cdf;
+    transform: scale(1.30);
+    border: none;
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 5px 10px;
+
+}
