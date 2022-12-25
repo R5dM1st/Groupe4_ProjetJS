@@ -1,3 +1,13 @@
-#description{
-list-style: lower-greek;
-}
+.contenu {
+    display: flex;
+  }
+#contenu1 {
+    flex: 1;
+    padding: 100px;
+    height: 300px;
+  }
+#contenu2 {
+    flex: 2;
+    padding: 100px;
+    height: 300px; 
+  }
