@@ -58,7 +58,6 @@ ul li:hover .sous{
     display: block;
 } 
 .sous li{
-    float: none;
     width: 100%;
     text-align: left;
 }
