@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
 }
-#partenaires .nationaux .univesitebretagne{
-
-    background-image: url(/image/logouniversitebretagne.png);
+#partenaires .nationaux .universitebretagne{
+    background-image: url(image/universitebretagne.png);
 }
