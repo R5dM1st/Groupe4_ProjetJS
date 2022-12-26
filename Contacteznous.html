@@ -2,47 +2,48 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Contactez-nous</title>
-        <style type="text/css">@import "style.css"; @import "menu.css"; @import "contacteznous.css";@import "footer.css";</style>
+        <title>Accueil</title>
+        <style type="text/css">@import "style.css"; @import "menu.css";@import "footer.css";@import "accueil.css";@import url(contacteznous.css);</style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-      <header>
-        <div id="logo">
-            <img src="image/LabISEN.png" alt="logo">
-        </div>
-        <nav>
-          <ul>
-              <li><a href="accueil.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
-              <li class="deroulant"><a href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche &ensp;</a>
-              <ul class="sous">
-                  <li><a href="thematiquederecheche.html">Thématiques de recherche</a></li>
-                  <li><a href="PlateformeTechnologique.html">Plateformes technologiques</a></li>
+        <header>
+            <div id="logo">
+                <img src="image/LabISEN.png" alt="logo">
+            </div>
+            <nav>
+              <ul>
+                  <li><a href="accueil.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                  <li class="deroulant"><a href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche &ensp;</a>
+                  <ul class="sous">
+                      <li><a href="thematiquederecheche.html">Thématiques de recherche</a></li>
+                      <li><a href="PlateformeTechnologique.html">Plateformes technologiques</a></li>
+                  </ul>
+                </li>
+                <li><a href="membre.html"><i class="fa-solid fa-user-group"></i> Membre</i></a></li>
+                <li><a href="projet.html"><i class="fa-solid fa-person-chalkboard"></i> Projets</a></li>
+                <li><a href="publi.html"><i class="fa-solid fa-file"></i> Publications</a></li>
+                <li><a href="partenaire.html"><i class="fa-solid fa-hands"></i> Partenaires</a></li>
+                <li class="deroulant"><a href="#"><i class="fa-solid fa-circle-info"></i> Infos et Contactez-nous</a>
+                  <ul class="sous">
+                    <li><a href="Contacteznous.html">Contactez-nous</a></li>
+                    <li><a href="planacces.html">Plan d'accès</a></li>
+                    <li><a href="offresemploi.html">Offres d'emploi <i class="fa-solid fa-briefcase"></i></a></li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-            <li><a href="membre.html"><i class="fa-solid fa-user-group"></i> Membre</i></a></li>
-            <li><a href="projet.html"><i class="fa-solid fa-person-chalkboard"></i> Projets</a></li>
-            <li><a href="publi.html"><i class="fa-solid fa-file"></i> Publications</a></li>
-            <li><a href="partenaire.html"><i class="fa-solid fa-hands"></i> Partenaires</a></li>
-            <li class="deroulant"><a href="#"><i class="fa-solid fa-circle-info"></i> Infos et Contactez-nous</a>
-              <ul class="sous">
-                <li><a href="Contacteznous.html">Contactez-nous</a></li>
-                <li><a href="planacces.html">Plan d'accès</a></li>
-                <li><a href="offresemploi.html">Offres d'emploi <i class="fa-solid fa-briefcase"></i></a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </header>
+            </nav>
+          </header>
           <form action="Contacteznous.html" method="get">
-            <input type="text" name="fname" placeholder="Prénom Nom">
+            <input type="text" name="prenom" placeholder="Prénom Nom" size="67" id="prenom">
             <br>
-            <input type="text" name="mail" placeholder="email@example.com">
             <br>
-            <input type="textarea" name="message" placeholder="Votre message (1000 caractères maximum)">
+            <input type="email" name="email" placeholder="email@example.com" size="67"  id="mail">
             <br>
-            Valider
-            <input type="submit" value="Valider">
+            <br>
+            <textarea name="message" placeholder="Votre message (1000 caractères maximum)" rows="7" cols="67" id="message"></textarea>
+            <br>
+            <input type="submit" value="Valider" id="valider">
         </form>
 
 
