@@ -1,7 +1,5 @@
-#partenaires{
+#container.partenaires{
     display: flex;
     flex-direction: column;
-}
-#partenaires .nationaux .universitebretagne{
-    background-image: url(image/universitebretagne.png);
+    justify-content: center;
 }
