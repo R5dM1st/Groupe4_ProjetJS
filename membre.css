@@ -1,0 +1,54 @@
+.professor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px;
+    max-width: 1100px;
+    padding: 50px 100px 50px;
+    text-align: center;
+    color: white;
+    background-color: goldenrod;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+  
+  .professor h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 8px 0;
+  }
+  
+  
+  .professor p {
+    font-size: 16px;
+    margin: 4px 0;
+  }
+  
+  .professor a {
+    color: azure;
+    text-decoration: none;
+  }
+  
+  .professor a:hover {
+    text-decoration: line-through;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px;
+    max-width: 1100px;
+    padding: 50px 100px 50px;
+    text-align: center;
+    color: white;
+    background-color: cadetblue;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+
+  
