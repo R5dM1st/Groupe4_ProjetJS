@@ -1,53 +1,109 @@
-.professor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 16px;
+.container {
+  align-items: center;
+  height: 50%; /* hauteur du conteneur */
+  width: 50%; /* largeur du conteneur */
+  margin: 0 auto; /* centre le conteneur horizontalement */
+  display: flex;
+  flex-direction: row;
+}
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  margin: 0 2% 20px;
+}
+.profile-card hr {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 20px 0;
+}
+.profile-card:hover {
+  box-shadow: 2px 2px 8px black;
+  background-color: #333;
+}
+.profile-card:hover .name {
+  color: white;
+}
+.profile-card:hover .title {
+  color: white;
+}
+.profile-card:hover .affiliation {
+  color: white;
+}
+.profile-card:hover .contact-info {
+  color: white;
+}
+.profile-card:hover .contact-info a {
+  color: white;
+}
+.profile-card:hover .contact-info a:hover {
+  color: white;
+}
 
-    padding: 50px 100px 50px;
-    text-align: center;
-    color: white;
-    background-color: goldenrod;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-  }
-  
-  .professor h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 8px 0;
-  }
-  
-  
-  .professor p {
-    font-size: 16px;
-    margin: 4px 0;
-  }
-  
-  .professor a {
-    color: azure;
-    text-decoration: none;
-  }
-  
-  .professor a:hover {
-    text-decoration: line-through;
-  }
 
-  .section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 16px;
-    padding: 50px 100px 50px;
-    text-align: center;
-    color: white;
-    background-color: cadetblue;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-  }
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
 
-  
+.name {
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.title {
+  font-size: 18px;
+  color: #777;
+  text-align: center;
+}
+
+.affiliation {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+.contact-info a i {
+  text-decoration: none;
+  color: gray;
+  font-size: 50px;
+  text-align: center;
+  margin: 10px; 
+}
+.contact-info :hover i{
+  color: white;
+}
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.keywords span{
+  font-size: 16px;
+  color: #777;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 5px 5px;
+  margin: 5px;
+}
+.period, .project, .affiliation, .supervisor{
+  font-size: 18px;
+  color: #777;
+  margin: 5px 0;
+}
