@@ -6,7 +6,6 @@
     background-position: left;
     background-size: 16px;
     padding-left: 25px;
-    justify-content: center;
 }
 #mail{
     height: 30px;
@@ -16,13 +15,13 @@
     background-position: left;
     background-size: 16px;
     padding-left: 25px;
-    justify-content: center;
+
 }
 #message{
     width: 500px;
 
     border-radius: 5px;
-    justify-content: center;
+
 }
 
 #valider{
@@ -32,6 +31,6 @@
     margin-top: 10px;
     font-size: 15px;
     padding: 5px 10px;
-    justify-content: center;
 
 }
+
