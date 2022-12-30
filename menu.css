@@ -81,3 +81,12 @@ ul li:hover .sous{
   margin: 50px 20px;
   height: 1500px;
 }
+@media only screen and (max-width: 768px) {
+    /* styles à appliquer lorsque la largeur de l'écran est inférieure à 768px */
+    header {
+      background-size: 200%;
+    }
+    nav ul li {
+      width: 25%;
+    }
+  }

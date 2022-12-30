@@ -1,3 +1,32 @@
+@media only screen and (max-width: 768px) {
+  /* styles à appliquer lorsque la largeur de l'écran est inférieure à 768px */
+  .content-1 {
+    padding: 20px;
+  }
+  .content-1 h2 {
+    font-size: 1.2em;
+  }
+  .content-1 h3 {
+    font-size: 1.2em;
+  }
+  .content-1 p {
+    font-size: 0.7rem;
+  }
+  .content-2 {
+    padding: 20px;
+  }
+    .content-2 {
+      padding: 20px 50px;
+    }
+    .content-2 h1 {
+      font-size: 1.5rem;
+    }
+    .content-2 p {
+      font-size: 0.7rem;
+    }
+}
+
+
 .content-1 {
 
   padding: 50px;

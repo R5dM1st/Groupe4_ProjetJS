@@ -83,3 +83,12 @@ opacity: 10;
     }
 
 
+@media screen and (max-width: 600px) {
+    .modal{
+        display: block;
+    }
+    .modal_content {
+        width: 90%;
+    }
+
+}
