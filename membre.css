@@ -5,17 +5,29 @@
   margin: 0 auto; /* centre le conteneur horizontalement */
   display: flex;
   flex-direction: row;
+
 }
+h2{
+  text-align: center;
+  margin: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: 3px solid #333;
+  padding-bottom: 50px;
+
+}
+
 .profile-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   width: 45%;
   margin: 0 2% 20px;
+
 }
 .profile-card hr {
   width: 100%;
@@ -29,7 +41,7 @@
 .profile-card:hover .name {
   color: white;
 }
-.profile-card:hover .title {
+.profile-card:hover .title{
   color: white;
 }
 .profile-card:hover .affiliation {
@@ -44,6 +56,19 @@
 .profile-card:hover .contact-info a:hover {
   color: white;
 }
+.profile-card:hover  .supervisors  {
+  color: white;
+}
+.profile-card:hover  .period  {
+  color: white;
+}
+.profile-card:hover  .project  {
+  color: white;
+}
+.profile-card:hover  .job  {
+  color: white;
+}
+
 
 
 .profile-picture {
@@ -62,6 +87,7 @@
 }
 
 .title {
+  text-overflow: clip;
   font-size: 18px;
   color: #777;
   text-align: center;
@@ -102,8 +128,9 @@
   padding: 5px 5px;
   margin: 5px;
 }
-.period, .project, .affiliation, .supervisor{
+.period, .project, .affiliation, .supervisors, .job{
   font-size: 18px;
   color: #777;
   margin: 5px 0;
 }
+
