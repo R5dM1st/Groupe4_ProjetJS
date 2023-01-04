@@ -1,4 +1,27 @@
 #offreemploi{
     display: flex;
     flex-direction: column;
+    padding: 20px;
+}
+.descriptionoffre{
+    padding-left: 25px;
+}
+.soustitre{
+
+    text-decoration: underline;
+}
+.titreoffre{
+    text-decoration: underline;
+}
+.postdoctoral{
+    font-weight: bold;
+}
+.typeoffre{
+    font-weight: bold;
+}
+.thesecifre{
+    font-weight: bold;
+}
+.txtoffre{
+    font-weight: bold;
 }
