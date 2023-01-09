@@ -4,22 +4,24 @@
     background-image:url(image/person.png);
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 16px;
+    background-size: 18px;
     padding-left: 25px;
+    border: solid;
 }
 #mail{
+    border: solid;
     height: 30px;
     border-radius: 5px;
     background-image:url(image/email.png);
     background-repeat: no-repeat;
     background-position: left;
-    background-size: 16px;
+    background-size: 18px;
     padding-left: 25px;
 
 }
 #message{
     width: 500px;
-
+    border: solid;
     border-radius: 5px;
 
 }
@@ -30,7 +32,8 @@
     border: none;
     margin-top: 10px;
     font-size: 15px;
-    padding: 5px 10px;
+    padding: 0.5em 10px;
+    border-radius: 5px;
 
 }
 
