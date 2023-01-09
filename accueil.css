@@ -46,12 +46,10 @@
   text-align: center;
   color: #4b5862;
   margin-bottom: 50px;
-  background-color: #998446;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;;
+  background-color: aliceblue;
 }
 .content-1 h2 {
-  font-size: 1.5em;
+  font-size: 2rem;
   margin: 50px 0;
   color: #1f3f5b;
   font-weight: 600;
@@ -88,9 +86,17 @@
   text-align: center;
   color: #4b5862;
   margin-bottom: 50px;
-  background-color: #97E6D2;
+}
+.content-2 img{
+  width: 50%;
+  height: 50%;
 
-
+}
+.content-2 h2 {
+  font-size: 2rem;
+  margin: 50px 0;
+  color: #1f3f5b;
+  font-weight: 600;
 }
 .content-2 h1 {
   font-size: 2rem;
@@ -98,72 +104,41 @@
   color: #1f3f5b;
   font-weight: 600;
 }
-.content-2 p {
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-  line-height: 1.5rem;
-  font-weight: lighter;
-}
-#team-skills {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px ;
-}
 
-#team-skills h2 {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-}
-#team-skills h3 {
-  font-size: 1.2em;
-  margin: 5%;
-  color: #1f3f5b;
-}
-
-#team-skills ul {
-  list-style: none;
-  padding: 0;
-}
-
-#team-skills li {
-  display: inline-block;
-  margin: 0 1em;
-  padding: 0.5em;
-  font-size: 1.5em;
-
-
-}
 .content-3 {
   padding: 50px 100px 50px;
   text-align: center;
-  color: white;
-  background-color:#E6CC80;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;;
+  background-color: antiquewhite;
+  margin-bottom: 50px;
 }
-.content-3 h1 {
+.content-3 h2 {
   font-size: 2rem;
-  margin-top: -130px;
+  margin: 50px 0;
+  color: #1f3f5b;
+  font-weight: 600;
 }
 
 .content-3 ul{
   list-style: circle;
-  margin: 0;
-  padding: 0;
 }
 .content-3 p a{
-  margin-top: 20px;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-  line-height: 1.5rem;
-  font-weight: lighter;
-  list-style: inside;
-  color: white;
   text-decoration: none;
+  color: #4b5862;
+}
+.content-3 li{
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #1f3f5b;
+  font-weight: 6000;
+  line-height: 1.5rem
+}
+.content-3 p:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 .content-3 p a:hover{
   color: #53AAD5;
   text-decoration: none;
   font-weight: bold;
+
 }
