@@ -1,10 +1,7 @@
 #thematiquederecherche{
     display: flex;
     flex-direction: column;
-<<<<<<< Updated upstream
 }
 .titrethematique{
     text-decoration: underline;
-=======
->>>>>>> Stashed changes
 }
