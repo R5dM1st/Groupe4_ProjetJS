@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
+    height: 50px;
 }
 .descriptionoffre{
     padding-left: 25px;

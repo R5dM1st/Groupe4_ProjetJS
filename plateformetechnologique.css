@@ -3,10 +3,13 @@
     background-repeat: no-repeat;
     background-size: 33%;
     background-position: bottom left;
+    background-color: aliceblue;
+    background-position-y: center;
 }
 .livinglab2{
     padding-left: 500px;
 }
-.environnementhybride2{
+.environnementhybride{
     padding-left: 500px;
+    background-color:  aliceblue;
 }

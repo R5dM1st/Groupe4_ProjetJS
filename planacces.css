@@ -3,11 +3,14 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    overflow: hidden;
 }
 .ISENACCES{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    background-color: aliceblue;
+    
 }
 section {
     background: #F6F3ED;
@@ -15,4 +18,11 @@ section {
     padding: 0.3em;
     border: 1px solid black;
     width: 11.5em;
-  }
+}
+.IsenBrest{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: aliceblue;
+    overflow: hidden;
+}
