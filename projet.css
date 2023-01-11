@@ -1,15 +1,63 @@
-.titre{
-    padding-left: 400px;
+h2{
+    text-align: center;
+    font-size: 2rem;
+    margin: 50px 0;
+    color: #1f3f5b;
+    font-weight: 600;
 }
-.description{
-    padding-left: 400px;
+.container{
+    border: #1f3f5b 2px solid;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: antiquewhite;
+    width: auto;
+    height: auto;
+
 }
-.motcle{
-    padding-left: 400px;
+.container h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
 }
-.partenaires{
-    padding-left: 400px;
+.container p{
+    font-size: 1.2rem;
+    margin: 20px 0;
+    text-align: center;
 }
-.roleprojet{
-    padding-left: 400px;
-}
+.projetencours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+  }
+  
+  .titre {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .description,
+  .motcle,
+  .partenaires,
+  .roleprojet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+
+  }
+  
+  .description h5,
+  .motcle h5,
+  .partenaires h5,
+  .roleprojet h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }

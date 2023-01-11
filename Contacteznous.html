@@ -36,25 +36,21 @@
             </ul>
         </nav>
       </header>
-      <div align="center">
-          <form action="Contacteznous.html" method="get" id="formcontact">
-            <input type="text" name="prenom" placeholder="Prénom Nom" size="67" id="prenom">
-            <br>
-            <br>
-            <input type="email" name="email" placeholder="email@example.com" size="67"  id="mail">
-            <br>
-            <br>
-            <textarea name="message" placeholder="Votre message (1000 caractères maximum)" rows="7" cols="67" id="message"></textarea>
-            <br>
-            <input type="submit" value="Valider" id="valider">          
-            <br>
-            <br>
-        </form>
-      </div>
-      <br>
-      <br>
-      <br>
+        <div class="contenaire">
+            <form action="Contacteznous.html" method="get" id="formcontact" required>
+              <input type="text" name="name" placeholder="Nom" size="67" id="prenom" required>
 
+
+              <input type="email" name="email" placeholder="email@example.com" size="67"  id="mail" required>
+
+
+              <textarea name="message" placeholder="Votre message (1000 caractères maximum)" rows="7" cols="67" id="message" required></textarea>
+  
+              <input type="submit" value="Valider" id="valider">          
+
+          </form>
+
+        </div>
 
         <footer>
           <div id="footer-lieu">
@@ -64,7 +60,6 @@
             <a href="#Rennes">Rennes</a>
             <a href="#Caen">Caen</a>
           </div>
-
 
 
           <div id="footer-contact">

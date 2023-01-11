@@ -1,3 +1,19 @@
+form {
+    width: auto;
+    height: auto;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+
+
 #prenom{
     height: 30px;
     border-radius: 5px;
@@ -7,6 +23,7 @@
     background-size: 18px;
     padding-left: 25px;
     border: solid;
+    margin: 10px;
 }
 #mail{
     border: solid;
@@ -17,23 +34,33 @@
     background-position: left;
     background-size: 18px;
     padding-left: 25px;
+    margin: 10px;
 
 }
 #message{
-    width: 500px;
+    width: 80%;
     border: solid;
     border-radius: 5px;
+    margin: 10px;
 
 }
 
-#valider{
-    background-color: #747cdf;
-    transform: scale(1.30);
+#valider {
+    background-color: #4CAF50;
     border: none;
-    margin-top: 10px;
-    font-size: 15px;
-    padding: 0.5em 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
     border-radius: 5px;
-
+    margin: 10px;
+    
 }
 
+#valider:hover {
+    background-color: green;
+}
