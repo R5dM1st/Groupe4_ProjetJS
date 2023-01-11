@@ -6,6 +6,8 @@
 }
 .descriptionoffre{
     padding-left: 25px;
+    font-size: 1.2rem;
+    margin: 20px 0;
 }
 .soustitre{
 
@@ -16,13 +18,22 @@
 }
 .postdoctoral{
     font-weight: bold;
+    font-size: 1.2rem;
+    margin: 20px 0;
 }
 .typeoffre{
     font-weight: bold;
+    font-size: 1.2rem;
+    margin: 20px 0;
 }
 .thesecifre{
     font-weight: bold;
+    font-size: 1.2rem;
+    margin: 20px 0;
 }
 .txtoffre{
     font-weight: bold;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    text-align: center;
 }

@@ -8,8 +8,22 @@
 }
 .livinglab2{
     padding-left: 500px;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    text-align: center;
 }
 .environnementhybride{
     padding-left: 500px;
     background-color:  aliceblue;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    text-align: center;
+}
+.introplateformerecherche{
+    font-size: 1.2rem;
+    margin: 20px 0;
+    text-align: center;
+}
+.plateformerecherche2{
+    background-color: aliceblue;
 }
