@@ -38,6 +38,13 @@ nav ul li{
     text-align: center;
     position: relative;
 }
+nav svg{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    fill: black;
+}
+
 
 nav ul::after{
     display: table;
@@ -60,6 +67,11 @@ nav a:hover{
     background-color: #666666;
     box-shadow: 2px 4px #999999;
     color: white;
+    transition: all 0.5s ease;
+}
+nav a:hover svg{
+  fill: white;
+  transition: all 0.5s ease;
 }
 
 .sous{
@@ -69,13 +81,20 @@ nav a:hover{
     position: absolute;
     width: 100%;
     z-index: 1000;
+    
+}
+.sous:hover nav{
+    background-color: #666666;
+    box-shadow: 2px 4px #999999;
+    color: white;
 }
 ul li:hover .sous{
     display: block;
 } 
 .sous li{
     width: 100%;
-    text-align: left;
+
+    text-align: center;
 }
 
 .sous a:hover{
@@ -95,5 +114,12 @@ ul li:hover .sous{
     }
     nav ul li {
       width: 25%;
+    }
+    nav ul li a {
+      font-size: 14px;
+    }
+    nav svg {
+      width: 15px;
+      height: 15px;
     }
   }

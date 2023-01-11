@@ -37,6 +37,12 @@
   .content-3 ul {
       font-size: 0.7rem;
     }
+  .content-3 li {
+      font-size: 0.7rem;
+    }
+  .content-4 {
+      padding: 20px 50px;
+    }
 }
 
 

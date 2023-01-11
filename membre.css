@@ -5,15 +5,14 @@
   margin: 0 auto; /* centre le conteneur horizontalement */
   display: flex;
   flex-direction: row;
-
 }
-h2{
+
+h2 {
   text-align: center;
   font-size: 2rem;
   margin: 50px 0;
   color: #1f3f5b;
   font-weight: 600;
-
 }
 
 .profile-card {
@@ -26,48 +25,63 @@ h2{
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   width: 45%;
   margin: 0 2% 20px;
-
 }
+
 .profile-card hr {
   width: 100%;
   border: 1px solid #ccc;
   margin: 20px 0;
 }
+
 .profile-card:hover {
   box-shadow: 2px 2px 8px black;
   background-color: #333;
+  transition: all 0.7s ease;
 }
+
 .profile-card:hover .name {
   color: white;
+  transition: all 0.7s ease;
 }
-.profile-card:hover .title{
+
+.profile-card:hover .title {
   color: white;
+  transition: all 0.7s ease;
 }
+
 .profile-card:hover .affiliation {
   color: white;
+  transition: all 0.7s ease;
 }
+
 .profile-card:hover .contact-info {
   color: white;
 }
-.profile-card:hover .contact-info a {
+
+
+.profile-card:hover .supervisors {
   color: white;
-}
-.profile-card:hover .contact-info a:hover {
-  color: white;
-}
-.profile-card:hover  .supervisors  {
-  color: white;
-}
-.profile-card:hover  .period  {
-  color: white;
-}
-.profile-card:hover  .project  {
-  color: white;
-}
-.profile-card:hover  .job  {
-  color: white;
+  transition: all 0.7s ease;
 }
 
+.profile-card:hover .period {
+  color: white;
+  transition: all 0.7s ease;
+}
+
+.profile-card:hover .project {
+  color: white;
+  transition: all 0.7s ease;
+}
+
+.profile-card:hover .job {
+  color: white;
+  transition: all 0.7s ease;
+}
+.profile-card:hover .contact-info svg {
+  fill: white;
+  transition: all 0.7s ease;
+}
 
 
 .profile-picture {
@@ -76,6 +90,10 @@ h2{
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
+}
+.profile-card:hover .profile-picture{
+  transform: scale(1.1);
+  transition: all 0.7s ease;
 }
 
 .name {
@@ -101,33 +119,61 @@ h2{
 .contact-info {
   display: flex;
   justify-content: center;
-  margin: 50px;
+  margin: 30px;
 }
+
 .contact-info a i {
   text-decoration: none;
   color: gray;
   font-size: 50px;
   text-align: center;
-  margin: 10px; 
+  margin: 10px;
 }
-.contact-info :hover i{
-  color: white;
+
+.contact-info svg{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  fill: black;
+  text-align: center;
+  margin: 10px;
 }
+
+
+.contact-info svg:hover {
+  fill: #f2f2f2;
+  transition: all 0.7s ease;
+  
+}
+
 .keywords {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
+  color: #f2f2f2;
+}
+.keywords span:hover {
+  background-color: white;
+  color: #333;
+  
+}
+.profile-card:hover .keywords span {
+  background-color: white;
+  color: #333;
+  
 }
 
-.keywords span{
+.keywords span {
   font-size: 16px;
-  color: #777;
-  background-color: #f2f2f2;
+  color: white;
+  background-color: black;
   border-radius: 5px;
   padding: 5px 5px;
   margin: 5px;
 }
-.period, .project, .affiliation, .supervisors, .job{
+
+.period, .project, .affiliation, .supervisors, .job {
   font-size: 18px;
   color: #777;
   margin: 5px 0;
@@ -135,10 +181,26 @@ h2{
 
 @media only screen and (max-width: 600px) {
   .container {
+    width: 80%;
+    height: auto;
     flex-direction: column;
+    flex-wrap: wrap;
   }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
   .profile-card {
-    width: 100%;
+    width: 90%; 
+    margin: 10px auto; 
   }
-  .
+  
+  .profile-picture {
+    width: 75px; 
+    height: 75px;
+  }
+  .contact-info a svg {
+    font-size: 40px;
+  }
 }
