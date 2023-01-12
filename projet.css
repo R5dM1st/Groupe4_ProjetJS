@@ -6,58 +6,112 @@ h2{
     font-weight: 600;
 }
 .container{
-    border: #1f3f5b 2px solid;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px 0;
-    background-color: antiquewhite;
-    width: auto;
-    height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+  border: solid;
+  border-color: black;
+}
+.container .cadre{
+  width: 40%;
 
 }
-.container h3{
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.container p{
-    font-size: 1.2rem;
-    margin: 20px 0;
-    text-align: center;
+.container .projet{
+  width: 60%;
 }
 .projetencours {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0;
-  }
-  
-  .titre {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .description,
-  .motcle,
-  .partenaires,
-  .roleprojet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0;
 
   }
+  
+.titre {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    padding: 20px;
+
+     }
+
+  
+.description,
+.motcle,
+.partenaires,
+.roleprojet {
+    background-color: #1f3f5b;
+    color: white;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.description:hover,
+.motcle:hover,
+.partenaires:hover,
+.roleprojet:hover {
+    background-color: gray;
+    color: white;
+    width: 90%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+
   
   .description h5,
   .motcle h5,
   .partenaires h5,
   .roleprojet h5 {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 20px;
+    
+    
   }
+@media (max-width: 600px) {
+    .container{
+        flex-direction: column;
+    }
+    .container .cadre{
+        width: 100%;
+    }
+    .container .projet{
+        width: 100%;
+    }
+    .projetencours {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .titre {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        margin: 20px 0;
+        padding: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    .description,
+    .motcle,
+    .partenaires,
+    .roleprojet {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+
+}
