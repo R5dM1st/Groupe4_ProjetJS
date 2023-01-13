@@ -11,6 +11,7 @@
     flex-wrap: nowrap;
     background-color: aliceblue;
     flex: 4px;
+    overflow: hidden
 }
 section {
     background: #F6F3ED;
@@ -25,4 +26,7 @@ section {
     flex-wrap: nowrap;
     background-color: aliceblue;
     overflow: hidden;
+}
+.isenNantes{
+    overflow: hidden
 }
