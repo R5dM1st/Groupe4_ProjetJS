@@ -5,13 +5,19 @@
     justify-content: center;
     overflow: hidden;
 }
+.ISENACCES a, h2{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
 .ISENACCES{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     background-color: aliceblue;
     flex: 4px;
-    overflow: hidden
+    overflow: hidden;
+
 }
 section {
     background: #F6F3ED;
