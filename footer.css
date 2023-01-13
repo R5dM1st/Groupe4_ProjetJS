@@ -12,8 +12,7 @@ footer {
 
  }
 #footer-lieu{
-    flex: left;
-    width: 33%;
+    width: 50%;
     text-align: center; 
     
 }
@@ -21,13 +20,13 @@ footer {
 
     text-decoration: none;
     color: black;
-    width: 33%;
+    width: 50%;
     height: 100%;
     padding: 10px;
 }
 #footer-contact{
     flex: right;
-    width: 33%;
+    width: 50%;
     text-align: center; 
     
 }
@@ -40,19 +39,19 @@ footer {
 }
 
 .modal {
-visibility: hidden;
-position: absolute;
-top: 0; right: 0;
-bottom: 0; left: 0;
-display: flex;
-align-items: center;
-justify-content: center;
-background: rgba(0, 0, 0, 0.18);
-transition: all .4s;
+    visibility: hidden;
+    position: fixed;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.18);
+    transition: all .4s;
 }
 .modal:target {
-visibility: visible;
-opacity: 10;
+    visibility: visible;
+    opacity: 10;
 }
 .modal_content {
     border-radius: 4px;
@@ -65,29 +64,58 @@ opacity: 10;
 
 
 }
-.modal_content-a{
+.modal_content a{
     text-decoration: none;
     color: black;
-    width: 33%;
-    height: 100%;
+
     padding: 10px;
+    margin: 10px;
+}
+.modal_content h1{
+    font-size: 1.8em;
+    margin: 0 0 1em;
+}
+.modal_content p, .modal_content a{
+    font-size: 1.2em;
+    margin: 0 0 1em;
+}
+.modal_content a:hover{
+    color: grey;
+    
 }
 
 .modal_close {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: grey;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
     text-decoration: none;
+    transition: all .4s;
+}
+.modal_close:hover {
+    color: red;
+}
+
+@media (max-width: 600px) {
+    /* styles pour les écrans de 600px ou moins */
+    * {
+        box-sizing: border-box;
     }
-
-
-@media screen and (max-width: 600px) {
-    .modal{
-        display: block;
+    footer { 
+        height: 80px;
+        flex-wrap: wrap;
+    }
+    #footer-lieu { 
+        width: 100%; 
+    }
+    #footer-contact { 
+        width: 100%; 
     }
     .modal_content {
-        width: 90%;
+        min-width: 300px;
+        max-width: 600px;
     }
-
 }

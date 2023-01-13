@@ -1,25 +1,19 @@
-@media only screen and (max-width: 768px) {
-  /* styles à appliquer lorsque la largeur de l'écran est inférieure à 768px */
+@media only screen and (max-width: 600px) {
+ 
   .content-1 {
     padding: 20px;
   }
-  .content-1 h2 {
+  .content-1 h2, .content-1 h3 {
     font-size: 1.2em;
   }
-  .content-1 h3 {
-    font-size: 1.2em;
-  }
-  .content-1 p {
+  .content-1 p, .content-2 h1 {
     font-size: 0.7rem;
-  }
-  .content-2 {
-    padding: 20px;
   }
   .content-2 {
       padding: 20px 50px;
     }
-  .content-2 h1 {
-      font-size: 1.5rem;
+  .content-2 img {
+      width: 100%;
     }
   .content-2 p {
       font-size: 0.7rem;
@@ -30,19 +24,14 @@
   .content-3 h1 {
       font-size: 1.5rem;
     }
-
-  .content-3 p {
-      font-size: 0.7rem;
-    }
-  .content-3 ul {
-      font-size: 0.7rem;
-    }
-  .content-3 li {
+  .content-3 ul, .content-3 li, .content-3 p {
       font-size: 0.7rem;
     }
   .content-4 {
       padding: 20px 50px;
     }
+    
+
 }
 
 
