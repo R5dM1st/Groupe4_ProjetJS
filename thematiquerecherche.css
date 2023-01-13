@@ -1,6 +1,7 @@
 #thematiquederecherche{
     display: flex;
     flex-direction: column;
+
 }
 .titrethematique{
     justify-content: center;
@@ -20,4 +21,30 @@
     font-size: 1.2rem;
     margin: 20px 0;
     text-align: center;
+}
+.flexaxe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.axe1recherche{
+    border: solid;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+}
+.axe2recherche{
+    border: solid;
+    border-radius: 5px;
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 10px;
+}
+.thematiquebox{
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 20px;
+    border: solid;
 }
