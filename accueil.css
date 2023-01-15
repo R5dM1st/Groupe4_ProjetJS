@@ -15,6 +15,10 @@
   .content-2 img {
       width: 100%;
     }
+  .content-2 img:hover{
+      transform: scale(1);
+      transition: 0.5s;
+  }
   .content-2 p {
       font-size: 0.7rem;
     }
@@ -121,11 +125,7 @@ h2 {
   font-weight: 6000;
   line-height: 1.5rem
 }
-.content-3 p:hover{
-  transform: scale(1.1);
-  transition: 0.5s;
-  font-weight: bold;
-}
+
 .content-3 p a:hover{
   color: #53AAD5;
   text-decoration: none;
