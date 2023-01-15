@@ -37,7 +37,6 @@ main {
 }
 
 .content-1 {
-
   padding: 50px;
   text-align: center;
   color: #4b5862;
@@ -83,11 +82,14 @@ h2 {
   margin-bottom: 50px;
 }
 .content-2 img{
-  width: 50%;
-  height: 50%;
+  width: 100%;
   max-width: 500px;
   min-width: 300px;
 
+}
+.content-2 img:active{
+  transform: scale(2);
+  transition: 0.5s;
 }
 
 .content-2 h1 {
