@@ -6,7 +6,11 @@
   display: flex;
   flex-direction: row;
 }
-
+br {
+  display: block;
+  margin: 1.5em;
+  content: "";
+}
 h2 {
   text-align: center;
   font-size: 2rem;
@@ -36,52 +40,15 @@ h2 {
 .profile-card:hover {
   box-shadow: 2px 2px 8px black;
   background-color: #333;
-  transition: all 0.7s ease;
+  transition: all 0.7s;
 }
 
-.profile-card:hover .name {
+
+.profile-card:hover .name, .profile-card:hover .title, .profile-card:hover .affiliation, .profile-card:hover .supervisors, .profile-card:hover .period, .profile-card:hover .project, .profile-card:hover .job, .profile-card:hover .contact-info svg, .profile-card:hover .email, .profile-card:hover .keywords span, .profile-card:hover {
   color: white;
-  transition: all 0.7s ease;
+  transition: all 0.7s;
 }
 
-.profile-card:hover .title {
-  color: white;
-  transition: all 0.7s ease;
-}
-
-.profile-card:hover .affiliation {
-  color: white;
-  transition: all 0.7s ease;
-}
-
-.profile-card:hover .contact-info {
-  color: white;
-}
-
-
-.profile-card:hover .supervisors {
-  color: white;
-  transition: all 0.7s ease;
-}
-
-.profile-card:hover .period {
-  color: white;
-  transition: all 0.7s ease;
-}
-
-.profile-card:hover .project {
-  color: white;
-  transition: all 0.7s ease;
-}
-
-.profile-card:hover .job {
-  color: white;
-  transition: all 0.7s ease;
-}
-.profile-card:hover .contact-info svg {
-  fill: white;
-  transition: all 0.7s ease;
-}
 
 
 .profile-picture {
@@ -93,7 +60,7 @@ h2 {
 }
 .profile-card:hover .profile-picture{
   transform: scale(1.1);
-  transition: all 0.7s ease;
+  transition: all 0.7s ;
 }
 
 .name {
@@ -143,12 +110,18 @@ h2 {
 .contact-info svg:hover {
   fill: white;
   transform: scale(1.15);
-  transition: all 0.7s ease;
+  transition: all 0.7s ;
   
 }
-.contact-info svg:hover {
-  fill: #f2f2f2;
-  transition: all 0.7s ease;
+.profile-card:hover .contact-info svg {
+  fill: white;
+  transition: all 0.7s ;
+}
+.email {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+  margin: 10px 0;
   
 }
 
@@ -173,7 +146,7 @@ h2 {
 .keywords span {
   font-size: 16px;
   color: white;
-  background-color: black;
+  background-color: #777;
   border-radius: 5px;
   padding: 5px 5px;
   margin: 5px;

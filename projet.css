@@ -1,3 +1,20 @@
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+  .container .cadre {
+    width: 100%;
+  }
+  .container .projet {
+    width: 100%;
+  }
+  .titre {
+    font-size: 1.2rem;
+  }
+}
 h2{
     text-align: center;
     font-size: 2rem;
@@ -74,44 +91,5 @@ h2{
     
     
   }
-@media (max-width: 600px) {
-    .container{
-        flex-direction: column;
-    }
-    .container .cadre{
-        width: 100%;
-    }
-    .container .projet{
-        width: 100%;
-    }
-    .projetencours {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-    }
-    .titre {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.5rem;
-        margin: 20px 0;
-        padding: 20px;
-        margin: 0;
-        padding: 0;
-    }
-    .description,
-    .motcle,
-    .partenaires,
-    .roleprojet {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        margin: 20px 0;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 0;
-        padding: 0;
-    }
 
-
-}
+  

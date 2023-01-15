@@ -85,29 +85,60 @@ h1{
     background-color: #993F54;
 }
 
-@media only screen and (max-width: 600px) {
-    .publi{
-        padding: 20px;
-        margin: 20px;
-        font-size: 0.8em;
+@media only screen and (max-width: 768px) {
+    .table-container {
+      max-width: 100%; /* Largeur maximale de 100% */
     }
-    .publi h1{
-        font-size: 1.2em;
+  
+    .publi {
+      width: 90%;
+      height: auto;
+      padding: 20px;
+      margin: 10px;
+      font-size: 0.8em;
     }
-    .publi td{
-        padding: 10px;
-        padding-top: 20px;
-        margin: 10px;
-        font-size: 1em;
+  
+    h1 {
+      font-size: 1.5rem;
+      margin: 25px 0;
     }
-    #com_congre{
-        width: 5px;
-        height: 5px;
+  
+    #element {
+      padding: 20px;
+      margin: 10px;
     }
-    #article{
-        width: 5px;
-        height: 5px;
+  
+    .publi h1 {
+      font-size: 1.2em;
+    }
+  
+    .publi td {
+      padding: 10px;
+      margin: 10px;
+      font-size: 0.8em;
+    }
+  
+    .publi th {
+      padding: 10px;
+      padding-bottom: 50px;
+    }
+  
+    .publi tr {
+      padding: 10px;
+        padding-top: 50px;
+    }
+  
+    .publi tr:hover {
+    box-shadow: none;
+    transform: scale(1);
+    }
+    
+    #com_congre, #article {
+    width: 5px;
+    height: 5px;
     }
   }
+  
+  
 
 
