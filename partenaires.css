@@ -3,7 +3,23 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
   }
+.titrepartenaire{
+  text-align: center;
+}
+.nationaux1{
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+.nationaux2{
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+}
+
 .partenaire h2{
     font-size: 1.5em;
     margin: 50px 0;
@@ -11,23 +27,16 @@
     font-weight: 600;
 }
 .partenaire img {
-        width: 150px;
-        height: 150px;
+        width: 175px;
+        height: 175px;
         margin: 10px;
         transition: 0.5s;
-
-    }
+}
 .partenaire img:hover {
         transform: scale(1.1);
         transition: 0.5s;
-    }
-.nationaux {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+}
 
-  }
 .internationaux {
     display: flex;
     flex-wrap: wrap;
@@ -38,14 +47,96 @@
 .partenaire p{
     font-size: 1em;
     margin: 50px 0;
-    color: #1f3f5b;
+  
     font-weight: 600;
     margin-top: 20px;
     padding: 0 20px;
     align-items: center;
 }
 
+.universitebretagne{
+  margin: 25px;
+}
+.malakoffmederic{
+  margin: 25px;
+}
+.ecr{
+  margin: 25px;
+}
 
+.kardham{
+  margin: 25px;
+}
 
+.castel{
+  margin: 25px;
+}
+.acome{
+  margin: 25px;
+}
+.generix{
+  margin: 25px;
+}
+.thales{
+  margin: 25px;
+}
+.enis{
+  padding: 100px;
+}
+.universiteMVR{
+  padding: 100px;
+}
+.internationaux img{
+  width: 150px;
+  height: 150px;
+}
 
+.tag1{
+  background-color: grey;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  scale: 0.6;
+}
+.tag:hover {
 
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.tag2{
+  background-color: grey;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  scale: 0.6;
+}
+.tag2:hover {
+
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.tag3{
+  background-color: grey;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  scale: 0.6;
+}
+.tag3:hover {
+
+  transform: scale(1.1);
+  transition: 0.5s;
+}
