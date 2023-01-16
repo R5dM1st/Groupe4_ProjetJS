@@ -1,8 +1,8 @@
 .container {
   align-items: center;
-  height: 50%; /* hauteur du conteneur */
-  width: 50%; /* largeur du conteneur */
-  margin: 0 auto; /* centre le conteneur horizontalement */
+  height: 50%;
+  width: 50%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
