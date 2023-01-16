@@ -1,20 +1,29 @@
 form {
-    width: auto;
-    height: auto;
-    background-color: #f2f2f2;
-    border-radius: 5px;
+
     padding: 20px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
+
+}
+.contenaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+h1{
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+    color: #4CAF50;
 }
 
-
-
-#prenom{
+#nom{
     height: 30px;
     border-radius: 5px;
     background-image:url(image/person.png);
@@ -38,7 +47,7 @@ form {
 
 }
 #message{
-    width: 80%;
+    width: 50%;
     border: solid;
     border-radius: 5px;
     margin: 10px;
@@ -62,5 +71,49 @@ form {
 }
 
 #valider:hover {
-    background-color: green;
+    background-color: beige;
+    color: black;
 }
+@media only screen and (max-width: 800px) {
+    form {
+        padding: 10px;
+        margin: 5px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    #nom, #mail {
+        height: 20px;
+        background-size: 14px;
+        padding-left: 20px;
+    }
+    #message {
+        width: 80%;
+    }
+    #valider {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    }
+    
+@media only screen and (max-width: 480px) {
+    form {
+        padding: 5px;
+        margin: 2px;
+    }
+    h1 {
+        font-size: 16px;
+    }
+    #nom, #mail {
+        height: 15px;
+        background-size: 12px;
+        padding-left: 15px;
+    }
+    #message {
+        width: 90%;
+    }
+    #valider {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    }

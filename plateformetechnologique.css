@@ -1,43 +1,100 @@
-.livinglab{
-    background-image: url(https://isen-brest.fr/wp-content/uploads/2020/05/chambre-connectee-768x169.png);
-    background-repeat: no-repeat;
-    background-size: 33%;
-    background-position: bottom left;
-    background-color: aliceblue;
-    background-position-y: center;
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+    margin: 25px 0;
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+  .container .cadre, .container .projet {
+    width: 100%;
+  }
+  .cadre {
+    margin: 10px 0;
+  }
+  .projet {
+    margin: 10px 0;
+  }
 }
-.livinglab2{
-    padding-left: 500px;
-    font-size: 1.2rem;
-    margin: 20px 0;
-    text-align: center;
-}
-.environnementhybride{
-    padding-left: 500px;
-    background-color:  aliceblue;
-    font-size: 1.2rem;
-    margin: 20px 0;
-    text-align: center;
-}
-.introplateformerecherche{
-    font-size: 1.2rem;
-    margin: 20px 0;
-    text-align: center;
-}
-.plateformerecherche2{
-    background-color: aliceblue;
-}
-.titreplateforme{
+
+  
+  h2{
+      text-align: center;
+      font-size: 2rem;
+      margin: 50px 0;
+      color: #1f3f5b;
+      font-weight: 600;
+  }
+.intro{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    font-size: 2rem;
-    margin: 50px 0;
-    color: #1f3f5b;
-    font-weight: 600;
-}
-.boxplateforme{
-    background-color: aliceblue;
-    border-radius: 5px;
+    align-items: center;
     padding: 20px;
-    border: solid;
+    margin: 20px 0;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 1.2rem;
 }
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 10px;
+}
+.container .cadre{
+    width: auto;
+  
+}
+.cadre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container .projet{
+    width: auto;
+  }
+#thematiquederecheche {
+      display: flex;
+      flex-direction: column;
+  
+    }
+    
+.titre{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        margin: 20px 0;
+        padding-top: 20px;
+        text-align: center;
+}
+  
+    
+.description{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin: 20px 0;
+        width: 90%;
+}
+  
+    
+.description p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+        padding: 20px;
+        text-align: justify;
+      
+      
+    }
+  
+    
+
+

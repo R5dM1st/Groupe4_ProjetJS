@@ -15,7 +15,15 @@
     .axe1recherche, .axe2recherche, .thematiquebox {
       margin: 5px;
     }
-  }
+    .thematiquebox {
+      margin-bottom: 50px;
+    }
+    .axe1recherche p:hover, .axe2recherche p:hover, .thematiquebox p:hover {
+      transform: none;
+      transition: 0.5s all ease;
+    }
+
+    }
   
 
 

@@ -22,12 +22,13 @@ h2{
     color: #1f3f5b;
     font-weight: 600;
 }
+
 .container{
   display: flex;
   justify-content: space-between;
   margin: 50px 0;
-  border: solid;
-  border-color: black;
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 10px;
 }
 .container .cadre{
   width: 40%;
@@ -36,7 +37,7 @@ h2{
 .container .projet{
   width: 60%;
 }
-.projetencours {
+.themat {
     display: flex;
     flex-direction: column;
 
@@ -64,6 +65,7 @@ h2{
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
+    
     
 }
 .description:hover,

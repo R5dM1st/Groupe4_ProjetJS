@@ -50,3 +50,19 @@
     padding: 20px;
     border: solid;
 }
+@media screen and (max-width: 768px) {
+    #offreemploi {
+    padding: 10px;
+    height: auto;
+    }
+    .descriptionoffre {
+    padding-left: 15px;
+    font-size: 1rem;
+    }
+    .postdoctoral, .typeoffre, .thesecifre, .txtoffre {
+    font-size: 1rem;
+    }
+    .offrepostdocbox1, .offrethesebox {
+    padding: 10px;
+    }
+    }
