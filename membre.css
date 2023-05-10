@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: row;
 }
-bouton{
+.modeEdition{
   background-color: #1f3f5b;
   border: none;
   color: white;
@@ -20,8 +20,48 @@ bouton{
   width: 100%;
   height: 100%;
   transition: all 0.5s;
-}
 
+}
+.modeEdition:hover{
+  background-color: #333;
+  transition: all 0.5s;
+}
+.ajouterMembre{
+  background-color: #1f3f5b;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+
+}
+.ajouterMembre:hover{
+  background-color: #333;
+  transition: all 0.5s;
+}
+.supprimerMembre{
+  background-color: #4b0202;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+
+}
 
 br {
   display: block;
