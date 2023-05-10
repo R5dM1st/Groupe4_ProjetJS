@@ -1,5 +1,10 @@
 
 //chargement de page
 function testChangePage() {
-    changePage();
+    //changePage();
+}
+//pages 3 Membre
+function testmember() {
+    scratchCard();
+    
 }
