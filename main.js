@@ -1,4 +1,4 @@
 function main(){
-    
+    testChangePage();
 }
 main();
