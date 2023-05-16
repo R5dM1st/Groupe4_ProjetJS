@@ -19,3 +19,9 @@ showButton2.addEventListener('click', () => {
 closebtn2.addEventListener('click', () => {
     container2.close(); // Ferme la fenetre modal
 });
+function copyplagia(){
+    document.addEventListener('copy', (event) => {
+        alert('Attention au plagiat');
+    }
+)};
+copyplagia();
