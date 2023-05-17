@@ -1,5 +1,14 @@
 
 //chargement de page
 function testChangePage() {
-    changePage();
+    loader();
+}
+//pages 3 Membre
+function testmember() {
+    scratchCard();
+    
+}
+//pie de page
+function testFooter() {
+    copierTel();
 }
