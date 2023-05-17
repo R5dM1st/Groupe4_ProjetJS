@@ -10,7 +10,7 @@ function testCopie() {
 }
 //pages 3 Membre
 function testmember() {
-    scratchCard();
+    gratter();
     
 }
 //pied de page

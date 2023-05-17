@@ -17,48 +17,59 @@ function handleCopyEvent() {
 
 function horloge(){
     let chrono = document.getElementsByClassName('clock')[0];
-    let time = 0;
+    let time = -2;
     chrono.innerHTML = time;
     setInterval(function(){
         time++;
         chrono.innerHTML = time;
     }
     , 1000);
+    //ajouter une horloge qui indique l'heure 
+    let horloge = document.getElementsByClassName('clock')[0];
+    let date = new Date();
+    let heure = date.getHours();
+    let minute = date.getMinutes();
+    let seconde = date.getSeconds();
+    horloge.innerHTML = heure+':'+minute+':'+seconde;
+    setInterval(function(){
+        date = new Date();
+        heure = date.getHours();
+        minute = date.getMinutes();
+        seconde = date.getSeconds();
+        horloge.innerHTML = heure+':'+minute+':'+seconde;
+    }
+    , 1000);
+    
 }
+
 function confirmMembre(){
-    let membre = document.getElementById('page')[4];
+    //recheche la page membre class membre
+    let membre = document.getElementsByClassName('membre')[0]; 
+
     membre.addEventListener('click', function(){
         let confirm = window.confirm('Voulez-vous vraiment accéder à la page Membres ?');
         if (confirm == true){
             window.location.href = 'membres.html';
+        }
+        else {
+            window.location.href = 'index.html';
         }
     }
     );
 }
 //pages 3 Membre
 //La photo de la carte membre profile-picture est recouverte d’un élément opaque qu’il est possible de « gratter » en le survolant avec la souris. Le grattage fait apparaître la photo en dessous.
-function scratchCard(){
-    let scratch1 = document.getElementsByClassName('profile-picture')[0];
-    let scratch2 = document.getElementsByClassName('profile-picture')[1];
-    scratch1.addEventListener('mouseover', function(){
-        scratch1.style.opacity = '0';
+function gratter(){
+    let profilePicture = document.getElementsByClassName('profile-picture')[0];
+    profilePicture.addEventListener('mouseover', function(){
+        profilePicture.style.opacity = '0';
     }
     );
-    scratch2.addEventListener('mouseover', function(){
-        scratch2.style.opacity = '0';
-    }
-    );
-    scratch1.addEventListener('mouseout', function(){
-        scratch1.style.opacity = '1';
-    }
-    );
-    
-    scratch2.addEventListener('mouseout', function(){
-        scratch2.style.opacity = '1';
+    profilePicture.addEventListener('mouseout', function(){
+        profilePicture.style.opacity = '1';
     }
     );
 }
-
 
 //Un clic sur ce bouton entraîne l’ouverture d’une fenêtre prompt qui demande d’entrer le nom du profil administrateur « admin » si on clique sur le bouton
 function modeEdition(){
@@ -160,15 +171,9 @@ function supprimerMembre(){
 
 //pied de page et onglet
 
-//dès qu'on click sur le numero de telephone, il est copié dans le presse papier
+//dès qu'on click sur le numéro de téléphone il est copié dans le presse papier
 function copierTel(){
-    let tel = document.getElementsByClassName('num');
-    tel.addEventListener('click', function(){
-        tel.select();
-        document.execCommand('copy');
-        alert('Le numéro de téléphone a été copié');
-    }
-    );
+
 
 }
 
@@ -183,3 +188,32 @@ function quiSommesNous(){
     let h1 = document.getElementsByTagName('h1')[0];
     
 }
+//Page2 Recherche
+const showButton = document.getElementById('modal-btn');
+const container = document.getElementById('modal-container');
+const closebtn = document.getElementById('close-btn');
+
+const showButton2 = document.getElementById('modal-btn2');
+const container2 = document.getElementById('modal-container2');
+const closebtn2 = document.getElementById('close-btn2')
+showButton.addEventListener('click', () => {
+    container.showModal(); //ouvre la fenetre modal
+    //agrandir la fenetre modal
+    container.style.width = '100%';
+});
+closebtn.addEventListener('click', () => {
+    container.close(); // Ferme la fenetre modal
+});
+
+showButton2.addEventListener('click', () => {
+    container2.showModal(); //ouvre la fenetre modal
+});
+closebtn2.addEventListener('click', () => {
+    container2.close(); // Ferme la fenetre modal
+});
+function copyplagia(){
+    document.addEventListener('copy', (event) => {
+        alert('Attention au plagiat');
+    }
+)};
+copyplagia();
