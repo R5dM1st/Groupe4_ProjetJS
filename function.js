@@ -16,7 +16,7 @@ function handleCopyEvent() {
 
 
 function horloge(){
-    let chrono = document.getElementsByClassName('clock')[0];
+    let chrono = document.getElementsByClassName('timer')[0];
     let time = -2;
     chrono.innerHTML = time;
     setInterval(function(){
@@ -147,9 +147,16 @@ function ajouterMembre() {
         email.classList.add("email");
         email.textContent = nameText+"[at]isen-ouest.ycnrea.fr";
         profileCard.appendChild(email);
-
-
-
+        //creer un bouton pour supprimer le membre
+        let button = document.createElement("button");
+        button.classList.add("button");
+        button.textContent = "Supprimer le membre";
+        button.addEventListener('click', function(){
+            supprimerMembre();
+        }
+        );
+        profileCard.appendChild(button);
+        
         let contactInfo = document.createElement("div");
         contactInfo.classList.add("contact-info");
 
@@ -170,12 +177,6 @@ function supprimerMembre(){
 }
 
 //pied de page et onglet
-
-//dès qu'on click sur le numéro de téléphone il est copié dans le presse papier
-function copierTel(){
-
-
-}
 
 
 //page d'accueil 
