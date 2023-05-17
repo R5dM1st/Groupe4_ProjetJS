@@ -60,7 +60,7 @@ h2{
     margin: 20px 0;
     padding: 20px;
 
-     }
+}
 
   
 .description,
@@ -104,4 +104,19 @@ h2{
     
   }
 
-  
+#img0{
+  height: 35%;
+  width: 35%;
+}
+#img1{
+  height: 35%;
+  width: 35%;
+}
+#img2{
+  height: 35%;
+  width: 35%;
+}
+#img3{
+  height: 35%;
+  width: 35%;
+}

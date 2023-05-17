@@ -189,7 +189,7 @@ function quiSommesNous(){
     let h1 = document.getElementsByTagName('h1')[0];
     
 }
-function fenetremodale(){
+/*function fenetremodale(){
     //Page2 Recherche
     const showButton = document.getElementById('modal-btn');
     const container = document.getElementById('modal-container');
@@ -214,7 +214,7 @@ function fenetremodale(){
         container2.close(); // Ferme la fenetre modal
     });
 }
-fenetremodale();
+fenetremodale();*/
 
 
 function copyplagia(){

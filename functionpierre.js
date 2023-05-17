@@ -30,4 +30,15 @@ copyplagia();*/
     //changement d'image en cas de click sur l'image
     
 }*/
+function changeImage(){
+    const image = document.getElementById('img0');
+    const image1 = document.getElementById('img1');
 
+    image.addEventListener('click', () => {
+        image.src = 'https://media.lesechos.com/api/v1/images/view/5c6ba5f93e45462730262d35/1280x720/060723627156-web-tete.jpg'
+    });
+    image1.addEventListener('click', () => {
+        image1.src ='https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Osama_bin_Laden_portrait.jpg/280px-Osama_bin_Laden_portrait.jpg'
+    });
+}
+changeImage();
