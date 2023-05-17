@@ -84,6 +84,31 @@ h1{
     height: 10px;
     background-color: #993F54;
 }
+.filtre{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  margin: 50px 0;
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  
+}
+.filtre input{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+.filtre select{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
 
 @media only screen and (max-width: 768px) {
     .table-container {

@@ -156,7 +156,7 @@ function ajouterMembre() {
         }
         );
         profileCard.appendChild(button);
-        
+
         let contactInfo = document.createElement("div");
         contactInfo.classList.add("contact-info");
 
@@ -218,3 +218,32 @@ function copyplagia(){
     }
 )};
 copyplagia();
+
+
+
+//page 1 accueil
+//fonction qui prend une class et qui affiche du texte avec de l'animation
+
+//page publication
+//fonction qui affiche les tr qui ont soient les id com_congre ou article 
+// function filtre(){
+//     let filtre = document.getElementById('filtre');
+//     let type = document.getElementById('type');
+//     if (type.value == 'com_congre'){
+//         filtre.style.display = 'block';
+//     }
+//     else {
+//         filtre.style.display = 'none';
+//     }
+
+// }
+// function typefiltre(){
+//     let filtre = document.getElementById('filtre');
+//     let type = document.getElementById('type');
+//     if (type.value == 'image'){
+//         filtre.style.display = 'block';
+//     }
+//     else {
+//         filtre.style.display = 'none';
+//     }
+// }
