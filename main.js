@@ -1,5 +1,5 @@
 function main(){
     testChangePage();
-    testmember();
+    testCopie();
 }
 main();
