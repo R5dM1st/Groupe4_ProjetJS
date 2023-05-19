@@ -1,5 +1,5 @@
 //Page2 Recherche
-const showButton = document.getElementById('modal-btn');
+/*const showButton = document.getElementById('modal-btn');
 const container = document.getElementById('modal-container');
 const closebtn = document.getElementById('close-btn');
 
@@ -20,8 +20,14 @@ closebtn2.addEventListener('click', () => {
     container2.close(); // Ferme la fenetre modal
 });
 function copyplagia(){
-    document.addEventListener('copy', (event) => {
+    document.addEventListener('copy', (event) => { //En cas de copie d'un texte un message sur le plagiat s'affiche
         alert('Attention au plagiat');
     }
 )};
-copyplagia();
+copyplagia();*/
+
+/*function changementImage(){
+    //changement d'image en cas de click sur l'image
+    
+}*/
+
