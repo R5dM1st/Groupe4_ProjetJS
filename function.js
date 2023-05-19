@@ -179,16 +179,8 @@ function supprimerMembre(){
 //pied de page et onglet
 
 
-//page d'accueil 
-//A l’arrivée sur la page, le texte « Qui sommes-nous ? » s’affiche petit à petit (mot par mot) avec un
-//intervalle entre chaque apparition de 1s. Quand tout le texte est apparu, il fait une translation vers la
-//droite puis vers la gauche avant de revenir à sa position initiale, puis tout s’efface et le cycle recommence.
-function quiSommesNous(){
-    //slectionner le texte content-1 et h1
-    let content1 = document.getElementsByClassName('content-1')[0];
-    let h1 = document.getElementsByTagName('h1')[0];
-    
-}
+
+
 //Page2 Recherche
 const showButton = document.getElementById('modal-btn');
 const container = document.getElementById('modal-container');
@@ -222,28 +214,4 @@ copyplagia();
 
 
 //page 1 accueil
-//fonction qui prend une class et qui affiche du texte avec de l'animation
 
-//page publication
-//fonction qui affiche les tr qui ont soient les id com_congre ou article 
-// function filtre(){
-//     let filtre = document.getElementById('filtre');
-//     let type = document.getElementById('type');
-//     if (type.value == 'com_congre'){
-//         filtre.style.display = 'block';
-//     }
-//     else {
-//         filtre.style.display = 'none';
-//     }
-
-// }
-// function typefiltre(){
-//     let filtre = document.getElementById('filtre');
-//     let type = document.getElementById('type');
-//     if (type.value == 'image'){
-//         filtre.style.display = 'block';
-//     }
-//     else {
-//         filtre.style.display = 'none';
-//     }
-// }
