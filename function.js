@@ -181,11 +181,10 @@ function supprimerMembre(){
 
 
 
-//Page2 Recherche
 
 
 function copyplagia(){
-    document.addEventListener('copy', (event) => {
+    document.addEventListener('copy', (event) => { //En cas de copie sur un page une alerte s'active avec un message sur le plagiat
         alert('Attention au plagiat');
     }
 )};
@@ -197,14 +196,13 @@ copyplagia();
 
 //Page thematique de recherche 
 function container(){
-let showButton = document.getElementById('modal-btn');
-let container = document.getElementById('modal-container');
-let closebtn = document.getElementById('close-btn');
-
+let showButton = document.getElementById('modal-btn'); //On récupère l'id du bouton pour ouvrir la fenêtre modale
+let container = document.getElementById('modal-container'); //On récupère l'id de la fenetre modale
+let closebtn = document.getElementById('close-btn');//On recupère l'id du bouton pour fermer la fenetre modale
 const showButton2 = document.getElementById('modal-btn2');
 const container2 = document.getElementById('modal-container2');
 const closebtn2 = document.getElementById('close-btn2')
-showButton.addEventListener('click', () => {
+showButton.addEventListener('click', () => { // Si il y a un click sur le bouton
     container.showModal(); //ouvre la fenetre modal
 });
 closebtn.addEventListener('click', () => {
