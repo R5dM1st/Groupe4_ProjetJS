@@ -42,21 +42,12 @@ function horloge(){
     
 }
 
-function confirmMembre(){
-    //recheche la page membre class membre
-    let membre = document.getElementsByClassName('membre')[0]; 
+//si on click sur la page membre, on affiche une fenetre qui demande de confirmer si on veut accéder à la page sinon on reste sur la page d'actuelle
+    
 
-    membre.addEventListener('click', function(){
-        let confirm = window.confirm('Voulez-vous vraiment accéder à la page Membres ?');
-        if (confirm == true){
-            window.location.href = 'membres.html';
-        }
-        else {
-            window.location.href = 'index.html';
-        }
-    }
-    );
-}
+
+
+
 //pages 3 Membre
 //La photo de la carte membre profile-picture est recouverte d’un élément opaque qu’il est possible de « gratter » en le survolant avec la souris. Le grattage fait apparaître la photo en dessous.
 function gratter(){
@@ -73,107 +64,104 @@ function gratter(){
 
 //Un clic sur ce bouton entraîne l’ouverture d’une fenêtre prompt qui demande d’entrer le nom du profil administrateur « admin » si on clique sur le bouton
 function modeEdition(){
-    let count = 0;
+    
     let admin = prompt('Entrez le nom du profil administrateur');
     if ( admin == 'admin'){
-
-            alert('Vous êtes en mode édition');
-            //on peut modifier la balise name directement depuis le html et la mise à jour en appuiyant sur le bouton
-            let name1 = document.getElementsByClassName('name')[0].innerHTML;
-            let name2 = document.getElementsByClassName('name')[1].innerHTML;
-            document.getElementsByClassName('name')[0].innerHTML = '<input type="text" id="input1" value="'+name1+'">';
-            document.getElementsByClassName('name')[1].innerHTML = '<input type="text" id="input2" value="'+name2+'">';
+        let adminpwd = prompt('Entrez le mot de passe du profil administrateur');
+        if(adminpwd == 'admin'){
             
-            //click sur entrer pour mettre à jour le nom et enlever le mode édition
-            document.getElementById('input1').addEventListener('keyup', function(e){
-                if (e.keyCode === 13){
-                    document.getElementsByClassName('name')[0].innerHTML = document.getElementById('input1').value;
-                    document.getElementsByClassName('name')[1].innerHTML = document.getElementById('input2').value;
-                    alert('Vous n\'êtes plus en mode édition');
+                alert('Vous êtes en mode édition');
+                //on peut modifier la balise name directement depuis le html et la mise à jour en appuiyant sur le bouton
+                let name1 = document.getElementsByClassName('name')[0].innerHTML;
+                let name2 = document.getElementsByClassName('name')[1].innerHTML;
+                document.getElementsByClassName('name')[0].innerHTML = '<input type="text" id="input1" value="'+name1+'">';
+                document.getElementsByClassName('name')[1].innerHTML = '<input type="text" id="input2" value="'+name2+'">';
+                
+                //click sur entrer pour mettre à jour le nom et enlever le mode édition
+                document.getElementById('input1').addEventListener('keyup', function(e){
+                    if (e.keyCode === 13){
+                        document.getElementsByClassName('name')[0].innerHTML = document.getElementById('input1').value;
+                        document.getElementsByClassName('name')[1].innerHTML = document.getElementById('input2').value;
+                        alert('Vous n\'êtes plus en mode édition');
+                    }
                 }
-            }
-            );
-            document.getElementById('input2').addEventListener('keyup', function(e){
-                if (e.keyCode === 13){
-                    document.getElementsByClassName('name')[0].innerHTML = document.getElementById('input1').value;
-                    document.getElementsByClassName('name')[1].innerHTML = document.getElementById('input2').value;
-                    alert('Vous n\'êtes plus en mode édition');
+                );
+                document.getElementById('input2').addEventListener('keyup', function(e){
+                    if (e.keyCode === 13){
+                        document.getElementsByClassName('name')[0].innerHTML = document.getElementById('input1').value;
+                        document.getElementsByClassName('name')[1].innerHTML = document.getElementById('input2').value;
+                        alert('Vous n\'êtes plus en mode édition');
+                    }
                 }
+                );
             }
-            );
         }
         else {
             alert('Vous n\'êtes pas en mode édition');
 
     
     }
-}
-    
+
+} 
 
 
 
 //ajoute une carte membre profile-card et l'ajouter dans le corps de la page
 function ajouterMembre() {
-    let admin = prompt('Entrez le nom du profil administrateur');
-    if ( admin == 'admin'){
-        alert('Vous êtes en mode édition');
-        let profileCard = document.createElement("div");
-        profileCard.classList.add("profile-card");
-        let profilePicture = document.createElement("img");
-        profilePicture.src = "image/0.jpg";
-        profilePicture.alt = "Profile picture";
-        profilePicture.classList.add("profile-picture");
-        profileCard.appendChild(profilePicture);
+            let profileCard = document.createElement("div");//créer une div
+            profileCard.classList.add("profile-card");//ajouter la classe profile-card à la div
+            let profilePicture = document.createElement("img");//créer une image
+            profilePicture.src = "image/0.jpg";//ajouter l'image
+            profilePicture.alt = "Profile picture";//ajouter l'alt
+            profilePicture.classList.add("profile-picture");//ajouter la classe profile-picture à l'image
+            profileCard.appendChild(profilePicture);//ajouter l'image à la div
 
-        // Création du nom
-        let name = document.createElement("div");
-        name.classList.add("name");
-        let nameText = prompt('Entrez le nom du nouveau membre');
-        name.textContent = nameText;
-        profileCard.appendChild(name);
 
-        // Création du titre
-        let title = document.createElement("div");
-        title.classList.add("title");
-        title.textContent = "Nouveau membre";
-        profileCard.appendChild(title);
+            let name = document.createElement("div");//créer une div
+            name.classList.add("name");//ajouter la classe name à la div
+            let nameText = prompt('Entrez le nom du nouveau membre');
+            name.textContent = nameText;
+            profileCard.appendChild(name);
 
-        let affiliation = document.createElement("div");
-        affiliation.classList.add("affiliation");
-        affiliation.textContent = "ISEN Yncréa Ouest - Nantes";
-        profileCard.appendChild(affiliation);
 
-        let email = document.createElement("div");
-        email.classList.add("email");
-        email.textContent = nameText+"[at]isen-ouest.ycnrea.fr";
-        profileCard.appendChild(email);
-        //creer un bouton pour supprimer le membre
-        let button = document.createElement("button");
-        button.classList.add("button");
-        button.textContent = "Supprimer le membre";
-        button.addEventListener('click', function(){
-            supprimerMembre();
-        }
-        );
-        profileCard.appendChild(button);
+            let title = document.createElement("div");//créer une div
+            title.classList.add("title");//ajouter la classe title à la div
+            title.textContent = "Nouveau membre";
+            profileCard.appendChild(title);
 
-        let contactInfo = document.createElement("div");
-        contactInfo.classList.add("contact-info");
+            let affiliation = document.createElement("div");//créer une div
+            affiliation.classList.add("affiliation");//ajouter la classe affiliation à la div
+            affiliation.textContent = "ISEN Yncréa Ouest - Nantes";
+            profileCard.appendChild(affiliation);
 
-        profileCard.appendChild(contactInfo);
-        document.body.appendChild(profileCard);
+            let email = document.createElement("div");//créer une div
+            email.classList.add("email");//ajouter la classe email à la div
+            email.textContent = nameText+"[at]isen-ouest.ycnrea.fr";
+            profileCard.appendChild(email);
+    
+            let button = document.createElement("button");//créer un bouton
+            button.classList.add("button");//ajouter la classe button au bouton
+            button.textContent = "Supprimer le membre";
+            button.addEventListener('click', function(){//ajouter un évènement au bouton
+                supprimerMembre();
+            }
+            );
+            profileCard.appendChild(button);
 
-        let container = document.getElementsByClassName('container')[0];
-        container.appendChild(profileCard);
+            let contactInfo = document.createElement("div");//créer une div
+            contactInfo.classList.add("contact-info");//ajouter la classe contact-info à la div
+
+            profileCard.appendChild(contactInfo);//ajouter la div à la div profile-card
+            document.body.appendChild(profileCard);//ajouter la div profile-card au corps de la page
+
+            let container = document.getElementsByClassName('container')[0];//récupérer la div container
+            container.appendChild(profileCard);//ajouter la div profile-card à la div container
     }
-    else {
-        alert('Vous n\'êtes pas en mode édition');
-    }
-}
+
 function supprimerMembre(){
-    let container = document.getElementsByClassName('container')[0];
+//supprimer la carte membre profile-card où ce trouve le bouton
     let profileCard = document.getElementsByClassName('profile-card')[0];
-    container.removeChild(profileCard);
+    profileCard.remove();
 }
 
 //pied de page et onglet
@@ -186,7 +174,24 @@ const showButton = document.getElementById('modal-btn');
 const container = document.getElementById('modal-container');
 const closebtn = document.getElementById('close-btn');
 
+const showButton2 = document.getElementById('modal-btn2');
+const container2 = document.getElementById('modal-container2');
+const closebtn2 = document.getElementById('close-btn2')
+showButton.addEventListener('click', () => {
+    container.showModal(); //ouvre la fenetre modal
+    //agrandir la fenetre modal
+    container.style.width = '100%';
+});
+closebtn.addEventListener('click', () => {
+    container.close(); // Ferme la fenetre modal
+});
 
+showButton2.addEventListener('click', () => {
+    container2.showModal(); //ouvre la fenetre modal
+});
+closebtn2.addEventListener('click', () => {
+    container2.close(); // Ferme la fenetre modal
+});
 function copyplagia(){
     document.addEventListener('copy', (event) => {
         alert('Attention au plagiat');
@@ -198,3 +203,29 @@ copyplagia();
 
 //page 1 accueil
 
+//page publication
+function namefiltre() {
+    
+    let input = document.getElementById("myInput");
+    let filter = input.value.toUpperCase();
+    let table = document.getElementsByClassName("publi")[0];
+    let tr = table.getElementsByTagName("tr");
+  
+    for (i = 0; i < tr.length; i++) {//pour chaque ligne de la table
+      td = tr[i].getElementsByTagName("td")[2];//on prend la 3eme colonne
+      if (td) {//si la colonne existe
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {//si le nom de l'auteur contient le texte recherché
+          tr[i].style.display = "";//on affiche la ligne
+        } else {//sinon on la cache
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+//cherche parmis les id des publications com_congre ou article et effacer les autres qui n'ont  pas le meme id
+function typefiltre(){
+
+
+}
