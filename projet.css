@@ -20,8 +20,7 @@
   position: fixed;
   opacity: 0.5;
   scale: 0.1;
-  padding-top: 185px;
-  padding-left: 2150px;
+  padding-top: 625px;
 }
 
 
@@ -60,7 +59,7 @@ h2{
     margin: 20px 0;
     padding: 20px;
 
-     }
+}
 
   
 .description,
@@ -104,5 +103,19 @@ h2{
     
   }
 
-
-  
+#img0{
+  height: 400px;
+  width: 1000px;
+}
+#img1{
+  height: 400px;
+  width: 1000px;
+}
+#img2{
+  height: 400px;
+  width: 1000px;
+} 
+#img3{
+  height: 400px;
+  width: 1000px;
+}
