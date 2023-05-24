@@ -156,7 +156,7 @@ function ajouterMembre() {
         }
         );
         profileCard.appendChild(button);
-        
+
         let contactInfo = document.createElement("div");
         contactInfo.classList.add("contact-info");
 
@@ -179,42 +179,12 @@ function supprimerMembre(){
 //pied de page et onglet
 
 
-//page d'accueil 
-//A l’arrivée sur la page, le texte « Qui sommes-nous ? » s’affiche petit à petit (mot par mot) avec un
-//intervalle entre chaque apparition de 1s. Quand tout le texte est apparu, il fait une translation vers la
-//droite puis vers la gauche avant de revenir à sa position initiale, puis tout s’efface et le cycle recommence.
-function quiSommesNous(){
-    //slectionner le texte content-1 et h1
-    let content1 = document.getElementsByClassName('content-1')[0];
-    let h1 = document.getElementsByTagName('h1')[0];
-    
-}
-/*function fenetremodale(){
-    //Page2 Recherche
-    const showButton = document.getElementById('modal-btn');
-    const container = document.getElementById('modal-container');
-    const closebtn = document.getElementById('close-btn');
 
-    const showButton2 = document.getElementById('modal-btn2');
-    const container2 = document.getElementById('modal-container2');
-    const closebtn2 = document.getElementById('close-btn2')
-    showButton.addEventListener('click', () => {
-        container.showModal(); //ouvre la fenetre modal
-        //agrandir la fenetre modal
-        container.style.width = '100%';
-    });
-    closebtn.addEventListener('click', () => {
-        container.close(); // Ferme la fenetre modal
-    });
 
-    showButton2.addEventListener('click', () => {
-        container2.showModal(); //ouvre la fenetre modal
-    });
-    closebtn2.addEventListener('click', () => {
-        container2.close(); // Ferme la fenetre modal
-    });
-}
-fenetremodale();*/
+//Page2 Recherche
+const showButton = document.getElementById('modal-btn');
+const container = document.getElementById('modal-container');
+const closebtn = document.getElementById('close-btn');
 
 
 function copyplagia(){
@@ -223,3 +193,8 @@ function copyplagia(){
     }
 )};
 copyplagia();
+
+
+
+//page 1 accueil
+

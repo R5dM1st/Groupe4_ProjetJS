@@ -18,5 +18,5 @@ function testFooter() {
     copierTel();
 }
 function testPages1() {
-    quiSommesNous();
+    animateText();
 }

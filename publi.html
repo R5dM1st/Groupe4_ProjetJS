@@ -41,13 +41,28 @@
                 </nav>
               </header>
         <h1>Publications</h1>
+        
+
       <div class="table-container">
+
+        
         <div id="element">
 
           <p>Pour une communication dans un congrès :<p id="com_congre"></p></p>
           <p>Pour un article dans une revue :<p id="article"></p></p>
         </div>
+          <div class="filtre">
+            <h2>Filtre</h2>
+                <input type="text" id="myInput" onkeyup="namefiltre()" placeholder="Search for names..">
+                <select id="mySelect" onchange="typefiltre()">
+                  <option value="all">All</option>
+                  <option value="com_congre">Communication dans un congrès</option>
+                  <option value="article">Article dans une revue</option>
+                </select>
+              
+          </div>
         <table class="publi">
+          
           <tr>
             <th>type</th>
             <th>Autor</th>
@@ -89,8 +104,10 @@
 
         </div>
         </table>
+        
 
       </div>
+
     
 
       <footer>
