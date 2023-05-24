@@ -228,7 +228,7 @@ function namefiltre() {
     for (i = 0; i < tr.length; i++) {//pour chaque ligne de la table
       td = tr[i].getElementsByTagName("td")[2];//on prend la 3eme colonne
       if (td) {//si la colonne existe
-        txtValue = td.textContent || td.innerText;
+        txtValue = td.textContent || td.innerText;//on prend le texte de la colonne
         if (txtValue.toUpperCase().indexOf(filter) > -1) {//si le nom de l'auteur contient le texte recherché
           tr[i].style.display = "";//on affiche la ligne
         } else {//sinon on la cache
@@ -238,12 +238,26 @@ function namefiltre() {
     }
   }
 
-//cherche parmis les id des publications com_congre ou article et effacer les autres qui n'ont  pas le meme id
-function typefiltre(){
-
-
+function  titrefiltre(){
+    let input = document.getElementById("myInput2");
+    let filter = input.value.toUpperCase();
+    let table = document.getElementsByClassName("publi")[0];
+    let tr = table.getElementsByTagName("tr");
+  
+    for (i = 0; i < tr.length; i++) {//pour chaque ligne de la table
+      td = tr[i].getElementsByTagName("td")[1];//on prend la 3eme colonne
+      if (td) {//si la colonne existe
+        txtValue = td.textContent || td.innerText;//on prend le texte de la colonne
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {//si le nom de l'auteur contient le texte recherché
+          tr[i].style.display = "";//on affiche la ligne
+        } else {//sinon on la cache
+          tr[i].style.display = "none";
+        }
+      }
+    }
 }
 
+//cherche parmis les id des publications com_congre ou article et effacer les autres qui n'ont  pas le meme id
 
 //Page thematique de recherche 
 function container(){
@@ -269,3 +283,19 @@ function container(){
         });
 }
 container();
+
+
+//Page 4 Contactez nous
+//utilise les elements du fromlaire dans le html qui si chaque champ input est vide le bouton a id valider n'est pas afficher sinon si tous les champs sont remplis le bouton est afficher
+function valider(){
+    let firstpassword=document.f1.password.value;
+    let secondpassword=document.f1.password2.value;
+    
+    if(firstpassword==secondpassword){
+    return true;
+    }
+    else{
+    alert("password must be same!");
+    return false;
+    }
+}
