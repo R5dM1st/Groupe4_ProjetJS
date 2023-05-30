@@ -30,6 +30,7 @@ copyplagia();*/
     //changement d'image en cas de click sur l'image
     
 }
+*/
 function changeImage(){
     let image = document.getElementById('img0');
     let image1 = document.getElementById('img1');
@@ -49,4 +50,4 @@ function changeImage(){
         image3.src="https://pbs.twimg.com/media/Euq-wexWQAABqnP?format=jpg&name=large"
     });
 }
-changeImage();*/
+changeImage();

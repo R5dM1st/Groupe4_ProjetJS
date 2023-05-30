@@ -4,10 +4,7 @@ function main(){
     testPages1();
     testFooter();
     containerTest();
-<<<<<<< Updated upstream
     changeImage();
-=======
     contacttest();
->>>>>>> Stashed changes
 }
 main();
