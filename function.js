@@ -1,12 +1,12 @@
 //toute les pages
-function loader(){
+function loader(){//affiche le loader pendant 2 secondes
     let loader = document.getElementsByClassName('loader');
-    setTimeout(function(){
+    setTimeout(function(){//après 2 secondes on enlève le loader
         loader[0].style.display = 'none';
     }, 2000);
 }
 
-function handleCopyEvent() {
+function copy() {
     document.addEventListener('copy', function(e){
         e.preventDefault();
         alert('Le plagiat est interdit');
@@ -26,11 +26,6 @@ function horloge(){
     , 1000);
     //ajouter une horloge qui indique l'heure 
     let horloge = document.getElementsByClassName('clock')[0];
-    let date = new Date();
-    let heure = date.getHours();
-    let minute = date.getMinutes();
-    let seconde = date.getSeconds();
-    horloge.innerHTML = heure+':'+minute+':'+seconde;
     setInterval(function(){
         date = new Date();
         heure = date.getHours();
@@ -42,67 +37,70 @@ function horloge(){
     
 }
 
-//si on click sur la page membre, on affiche une fenetre qui demande de confirmer si on veut accéder à la page sinon on reste sur la page d'actuelle
-    
+//numéro de téléphone
 
+    
+function valider() {
+    var nomInput = document.getElementById("nom");
+    var mailInput = document.getElementById("mail");
+    var messageInput = document.getElementById("message");
+    var validerBtn = document.getElementById("valider");
+  
+    if (nomInput.value === "" || mailInput.value === "" || messageInput.value === "") {
+      validerBtn.disabled = true;
+      return false;
+    }
+  
+    return true;
+  }
+  
 
 
 
 //pages 3 Membre
 //La photo de la carte membre profile-picture est recouverte d’un élément opaque qu’il est possible de « gratter » en le survolant avec la souris. Le grattage fait apparaître la photo en dessous.
-function gratter(){
-    let profilePicture = document.getElementsByClassName('profile-picture')[0];
-    profilePicture.addEventListener('mouseover', function(){
-        profilePicture.style.opacity = '0';
-    }
-    );
-    profilePicture.addEventListener('mouseout', function(){
-        profilePicture.style.opacity = '1';
-    }
-    );
-}
 
 //Un clic sur ce bouton entraîne l’ouverture d’une fenêtre prompt qui demande d’entrer le nom du profil administrateur « admin » si on clique sur le bouton
-function modeEdition(){
-    
+function modeEdition() {
     let admin = prompt('Entrez le nom du profil administrateur');
-    if ( admin == 'admin'){
-        let adminpwd = prompt('Entrez le mot de passe du profil administrateur');
-        if(adminpwd == 'admin'){
-            
-                alert('Vous êtes en mode édition');
-                //on peut modifier la balise name directement depuis le html et la mise à jour en appuiyant sur le bouton
-                let name1 = document.getElementsByClassName('name')[0].innerHTML;
-                let name2 = document.getElementsByClassName('name')[1].innerHTML;
-                document.getElementsByClassName('name')[0].innerHTML = '<input type="text" id="input1" value="'+name1+'">';
-                document.getElementsByClassName('name')[1].innerHTML = '<input type="text" id="input2" value="'+name2+'">';
-                
-                //click sur entrer pour mettre à jour le nom et enlever le mode édition
-                document.getElementById('input1').addEventListener('keyup', function(e){
-                    if (e.keyCode === 13){
-                        document.getElementsByClassName('name')[0].innerHTML = document.getElementById('input1').value;
-                        document.getElementsByClassName('name')[1].innerHTML = document.getElementById('input2').value;
-                        alert('Vous n\'êtes plus en mode édition');
-                    }
-                }
-                );
-                document.getElementById('input2').addEventListener('keyup', function(e){
-                    if (e.keyCode === 13){
-                        document.getElementsByClassName('name')[0].innerHTML = document.getElementById('input1').value;
-                        document.getElementsByClassName('name')[1].innerHTML = document.getElementById('input2').value;
-                        alert('Vous n\'êtes plus en mode édition');
-                    }
-                }
-                );
-            }
-        }
-        else {
-            alert('Vous n\'êtes pas en mode édition');
-
-    
+    if (admin !== 'admin') {
+      alert('Vous n\'êtes pas en mode édition');
+      return;
     }
-
-} 
+    
+    let adminpwd = prompt('Entrez le mot de passe du profil administrateur');
+    if (adminpwd !== 'admin') {
+      alert('Vous n\'êtes pas en mode édition');
+      return;
+    }
+    
+    alert('Vous êtes en mode édition');
+  
+    let names = document.getElementsByClassName('name');
+    Array.from(names).forEach(function(name) {//pour chaque nom de la classe name on crée un input
+      let currentValue = name.innerHTML;
+      let input = document.createElement('input');
+      input.type = 'text';
+      input.value = currentValue;
+      name.innerHTML = '';
+      name.appendChild(input);
+    });
+  
+    document.addEventListener('keyup', function(event) {
+      if (event.keyCode === 13) {
+        let inputs = document.getElementsByTagName('input');
+        Array.from(inputs).forEach(function(input) {//pour chaque input on crée un span avec le texte de l'input on utilise Array car on ne peut pas utiliser forEach sur un HTMLCollection(qui est une liste d'éléments)
+          let name = input.value;
+          let nameElement = document.createElement('span');
+          nameElement.className = 'name';
+          nameElement.innerHTML = name;
+          input.parentNode.replaceChild(nameElement, input);
+        });
+        alert('Vous n\'êtes plus en mode édition');
+      }
+    });
+  }
+  
 
 
 
@@ -171,12 +169,6 @@ function supprimerMembre(){
 
 
 
-function copyplagia(){
-    document.addEventListener('copy', (event) => { //En cas de copie sur un page une alerte s'active avec un message sur le plagiat
-        alert('Attention au plagiat');
-    }
-)};
-copyplagia();
 
 
 
@@ -187,9 +179,9 @@ function container(){
     let showButton = document.getElementById('modal-btn'); //On récupère l'id du bouton pour ouvrir la fenêtre modale
     let container = document.getElementById('modal-container'); //On récupère l'id de la fenetre modale
     let closebtn = document.getElementById('close-btn');//On recupère l'id du bouton pour fermer la fenetre modale
-    const showButton2 = document.getElementById('modal-btn2');
-    const container2 = document.getElementById('modal-container2');
-    const closebtn2 = document.getElementById('close-btn2')
+    let showButton2 = document.getElementById('modal-btn2');
+    let container2 = document.getElementById('modal-container2');
+    let closebtn2 = document.getElementById('close-btn2')
     showButton.addEventListener('click', () => { // Si il y a un click sur le bouton
         container.showModal(); //ouvre la fenetre modal
         //agrandir la fenetre modal
@@ -211,9 +203,7 @@ function container(){
         }
     )}; 
 }
-copyplagia();
-
-
+container();
 
 //page 1 accueil
 
@@ -259,43 +249,8 @@ function  titrefiltre(){
 
 //cherche parmis les id des publications com_congre ou article et effacer les autres qui n'ont  pas le meme id
 
-//Page thematique de recherche 
-function container(){
-        let showButton = document.getElementById('modal-btn');
-        let container = document.getElementById('modal-container');
-        let closebtn = document.getElementById('close-btn');
 
-        const showButton2 = document.getElementById('modal-btn2');
-        const container2 = document.getElementById('modal-container2');
-        const closebtn2 = document.getElementById('close-btn2')
-        showButton.addEventListener('click', () => {
-            container.showModal(); //ouvre la fenetre modal
-        });
-        closebtn.addEventListener('click', () => {
-            container.close(); // Ferme la fenetre modal
-        });
-
-        showButton2.addEventListener('click', () => {
-            container2.showModal(); //ouvre la fenetre modal
-        });
-        closebtn2.addEventListener('click', () => {
-            container2.close(); // Ferme la fenetre modal
-        });
-}
-container();
 
 
 //Page 4 Contactez nous
-//utilise les elements du fromlaire dans le html qui si chaque champ input est vide le bouton a id valider n'est pas afficher sinon si tous les champs sont remplis le bouton est afficher
-function valider(){
-    let firstpassword=document.f1.password.value;
-    let secondpassword=document.f1.password2.value;
-    
-    if(firstpassword==secondpassword){
-    return true;
-    }
-    else{
-    alert("password must be same!");
-    return false;
-    }
-}
+

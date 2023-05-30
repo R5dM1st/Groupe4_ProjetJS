@@ -4,7 +4,7 @@ function testChangePage() {
     loader();
 }
 function testCopie() {
-    handleCopyEvent();
+    copy();
     horloge();
     confirmMembre();
 }
@@ -13,9 +13,13 @@ function testmember() {
     gratter();
     
 }
+function containerTest() {
+    container();
+}
+
 //pied de page
 function testFooter() {
-    copierTel();
+    phone();
 }
 function testPages1() {
     animateText();
