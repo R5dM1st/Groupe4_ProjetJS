@@ -165,13 +165,6 @@ function supprimerMembre(){
 //pied de page et onglet
 
 
-
-
-
-
-
-
-
 //page 1 accueil
 
 //Page thematique de recherche 
@@ -205,8 +198,6 @@ function container(){
         }
     )}; 
 }
-
-//page 1 accueil
 
 //page publication
 function namefiltre() {
