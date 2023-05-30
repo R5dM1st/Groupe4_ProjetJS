@@ -4,5 +4,6 @@ function main(){
     testPages1();
     testFooter();
     containerTest();
+    changeImage();
 }
 main();
