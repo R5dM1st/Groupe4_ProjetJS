@@ -9,7 +9,7 @@ function loader(){//affiche le loader pendant 2 secondes
 function copy() {
     document.addEventListener('copy', function(e){
         e.preventDefault();
-        alert('Le plagiat est interdit');
+        console.log('Le plagiat est interdit');
     }
     );
 }
@@ -40,26 +40,20 @@ function horloge(){
 //numéro de téléphone
 
     
-function valider() {
-    var nomInput = document.getElementById("nom");
-    var mailInput = document.getElementById("mail");
-    var messageInput = document.getElementById("message");
-    var validerBtn = document.getElementById("valider");
-  
-    if (nomInput.value === "" || mailInput.value === "" || messageInput.value === "") {
-      validerBtn.disabled = true;
-      return false;
-    }
-  
-    return true;
-  }
+
   
 
 
 
 //pages 3 Membre
-//La photo de la carte membre profile-picture est recouverte d’un élément opaque qu’il est possible de « gratter » en le survolant avec la souris. Le grattage fait apparaître la photo en dessous.
-
+function confirmMembre() {
+  event.preventDefault();
+  
+  let confirmation = confirm("Êtes-vous sûr de vouloir accéder à la page des membres ?");
+  if (confirmation) {
+    window.location.href = "membre.html";
+  }
+}
 //Un clic sur ce bouton entraîne l’ouverture d’une fenêtre prompt qui demande d’entrer le nom du profil administrateur « admin » si on clique sur le bouton
 function modeEdition() {
     let admin = prompt('Entrez le nom du profil administrateur');
