@@ -271,3 +271,43 @@ function changeImage(){
   });
 }
 changeImage();
+
+
+
+function valide(){
+  let nom = document.getElementById('nom').value;
+  let email = document.getElementById('mail').value;
+  let message = document.getElementById('message').value;
+  if(nom == "" || email == "" || message == ""){
+    document.getElementById('valider').style.backgroundColor = "red";
+  }
+  else{
+    //affiche le bouton en vert si les champs sont remplis directement quand on click sur le bouton
+    document.getElementById('valider').style.backgroundColor = "green";
+    //wait 2 secondes avant de jouer au jeu 
+      jeu();
+
+  
+  }
+
+}
+
+function jeu(){
+  let choix = prompt('Choisissez entre pierre, feuille ou ciseaux');
+  let choixOrdi = Math.random();
+  if (choixOrdi < 0.34) {
+      choixOrdi = 'pierre';
+  } else if(choixOrdi <= 0.67) {
+      choixOrdi = 'feuille';
+  } else {
+      choixOrdi = 'ciseaux';
+  }
+  alert('L\'ordinateur a choisi '+choixOrdi);
+  if (choix === choixOrdi) {
+      alert('Egalité');
+  } else if ((choix === 'pierre' && choixOrdi === 'ciseaux') || (choix === 'feuille' && choixOrdi === 'pierre') || (choix === 'ciseaux' && choixOrdi === 'feuille')) {
+      alert('Vous avez gagné');
+  } else {
+      alert('Vous avez perdu');
+  }
+}

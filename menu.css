@@ -112,6 +112,7 @@ nav .clock{
 
 
 }
+
 nav .timer{
   display: block;
   text-decoration: none;
@@ -132,6 +133,12 @@ nav a:hover{
     box-shadow: 2px 4px #999999;
     color: white;
     transition: all 0.5s ease;
+}
+#image{
+  display: block;
+}
+#image:hover{
+  display: block;
 }
 nav a:hover svg{
   fill: white;
