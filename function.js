@@ -290,14 +290,18 @@ function valide(){
 function jeu(){
   let choix = prompt('Choisissez entre pierre, feuille ou ciseaux');
   //math.random() renvoie un nombre aléatoire entre 1,2,3
-  let choixOrdi = Math.floor(Math.random() * 3) + 1;
-  if (choixOrdi = 1) {
+  let choixOrdi = Math.floor(Math.random() * 3);
+  if (choixOrdi === 0) {
+    
       choixOrdi = 'pierre';
-  } else if(choixOrdi = 2) {
+  } else if (choixOrdi === 1) {
+
       choixOrdi = 'feuille';
-  } else if(choixOrdi = 3){
+  } else {
+
       choixOrdi = 'ciseaux';
   }
+
   alert('L\'ordinateur a choisi '+choixOrdi);
   if (choix === choixOrdi) {
       alert('Egalité');
