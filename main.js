@@ -3,7 +3,5 @@ function main(){
     testCopie();
     testPages1();
     testFooter();
-    containerTest();
-    changeImage();
 }
 main();

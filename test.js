@@ -13,10 +13,6 @@ function testmember() {
     gratter();
     
 }
-function containerTest() {
-    container();
-}
-
 //pied de page
 function testFooter() {
     phone();
