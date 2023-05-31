@@ -14,6 +14,9 @@
   .titre {
     font-size: 1.2rem;
   }
+  #retourhaut {
+    display: none;
+  }
 }
 
 #retourhaut{

@@ -13,28 +13,8 @@ main {
   margin-bottom: 50px;
   background-color: aliceblue;
 }
-.magic{
-  animation: deplacement 5s infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
 
 
-
-
-}
-
-@keyframes deplacement {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(10%);
-  }
-
-
-}
 
 .content-1 h3 {
   font-size: 1.4em;
@@ -47,6 +27,7 @@ main {
   letter-spacing: 1px;
   font-size: 0.8rem;
   line-height: 1.5rem;
+  padding-top: 20px;
 }
 .content-1 button {
   background-color: #1f3f5b;
@@ -220,24 +201,34 @@ main {
   }
 }
 
-#textetrantition{
-        position: relative;
-        font-family: Geneva, sans-serif;
-        font-size: 60px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        background: linear-gradient(90deg, #167595, #fff, #000);
-        background-repeat: no-repeat;
-        background-size: 80%;
-        animation: animate 3s infinite;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+
+
+#textetrantition {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: move 2s ease-in-out infinite;
 }
-@keyframes animate {
+
+@keyframes move {
   0% {
-    background-position: -500%;
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    transform: translate(-50%, -70%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  75% {
+    transform: translate(-50%, -30%);
   }
   100% {
-    background-position: 500%;
+    transform: translate(-50%, -50%);
   }
 }

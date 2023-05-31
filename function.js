@@ -7,11 +7,12 @@ function loader(){//affiche le loader pendant 2 secondes
 }
 
 function copy() {
-    document.addEventListener('copy', function(e){
-        e.preventDefault();
-        alert('Le plagiat est interdit');
-    }
-    );
+  document.addEventListener('copy', function(e) {
+      if (e) {
+          e.preventDefault();
+          console.log('Le plagiat est interdit');
+      }
+  });
 }
 
 
@@ -37,31 +38,24 @@ function horloge(){
     
 }
 
-//numéro de téléphone
 
     
-function valider() {
-    var nomInput = document.getElementById("nom");
-    var mailInput = document.getElementById("mail");
-    var messageInput = document.getElementById("message");
-    var validerBtn = document.getElementById("valider");
-  
-    if (nomInput.value === "" || mailInput.value === "" || messageInput.value === "") {
-      validerBtn.disabled = true;
-      return false;
-    }
-  
-    return true;
-  }
+
   
 
 
 
 //pages 3 Membre
-//La photo de la carte membre profile-picture est recouverte d’un élément opaque qu’il est possible de « gratter » en le survolant avec la souris. Le grattage fait apparaître la photo en dessous.
+function confirmMembre() {
+  event.preventDefault();//empêche le comportement par défaut du bouton pour pouvoir afficher la boite de dialogue
+  
+  let confirmation = confirm("Êtes-vous sûr de vouloir accéder à la page des membres ?");
+  if (confirmation) {
+    window.location.href = "membre.html";
+    }
+  }
 
-//Un clic sur ce bouton entraîne l’ouverture d’une fenêtre prompt qui demande d’entrer le nom du profil administrateur « admin » si on clique sur le bouton
-function modeEdition() {
+function modeEdition() {//mode édition pour modifier les noms des membres
     let admin = prompt('Entrez le nom du profil administrateur');
     if (admin !== 'admin') {
       alert('Vous n\'êtes pas en mode édition');
@@ -76,25 +70,25 @@ function modeEdition() {
     
     alert('Vous êtes en mode édition');
   
-    let names = document.getElementsByClassName('name');
+    let names = document.getElementsByClassName('name');//récupérer les noms de la classe name
     Array.from(names).forEach(function(name) {//pour chaque nom de la classe name on crée un input
-      let currentValue = name.innerHTML;
+      let nom = name.innerHTML;//on récupère le texte du nom
       let input = document.createElement('input');
       input.type = 'text';
-      input.value = currentValue;
+      input.value = nom;
       name.innerHTML = '';
       name.appendChild(input);
     });
   
     document.addEventListener('keyup', function(event) {
-      if (event.keyCode === 13) {
+      if (event && event.keyCode === 13) {
         let inputs = document.getElementsByTagName('input');
         Array.from(inputs).forEach(function(input) {//pour chaque input on crée un span avec le texte de l'input on utilise Array car on ne peut pas utiliser forEach sur un HTMLCollection(qui est une liste d'éléments)
           let name = input.value;
-          let nameElement = document.createElement('span');
-          nameElement.className = 'name';
-          nameElement.innerHTML = name;
-          input.parentNode.replaceChild(nameElement, input);
+          let elementDunom = document.createElement('span');
+          elementDunom.className = 'name';
+          elementDunom.innerHTML = name;
+          input.parentNode.replaceChild(elementDunom, input);
         });
         alert('Vous n\'êtes plus en mode édition');
       }
@@ -104,56 +98,47 @@ function modeEdition() {
 
 
 
-//ajoute une carte membre profile-card et l'ajouter dans le corps de la page
-function ajouterMembre() {
-            let profileCard = document.createElement("div");//créer une div
-            profileCard.classList.add("profile-card");//ajouter la classe profile-card à la div
-            let profilePicture = document.createElement("img");//créer une image
-            profilePicture.src = "image/0.jpg";//ajouter l'image
-            profilePicture.alt = "Profile picture";//ajouter l'alt
-            profilePicture.classList.add("profile-picture");//ajouter la classe profile-picture à l'image
-            profileCard.appendChild(profilePicture);//ajouter l'image à la div
 
+function ajouterMembre() {//ajouter un membre à la page membre
+        let profileCard = document.createElement("div");//créer une div
+        profileCard.classList.add("profile-card");//ajouter la classe profile-card à la div
+        let profilePicture = document.createElement("img");//créer une image
+        profilePicture.src = "image/0.jpg";//ajouter l'image
+        profilePicture.alt = "Profile picture";//ajouter l'alt
+        profilePicture.classList.add("profile-picture");//ajouter la classe profile-picture à l'image
+        profileCard.appendChild(profilePicture);//ajouter l'image à la di
+        let name = document.createElement("div");//créer une div
+        name.classList.add("name");//ajouter la classe name à la div
+        let nameText = prompt('Entrez le nom du nouveau membre');
+        name.textContent = nameText;
+        profileCard.appendChild(name)
+        let title = document.createElement("div");//créer une div
+        title.classList.add("title");//ajouter la classe title à la div
+        title.textContent = "Nouveau membre";
+        profileCard.appendChild(title)
+        let affiliation = document.createElement("div");//créer une div
+        affiliation.classList.add("affiliation");//ajouter la classe affiliation à la div
+        affiliation.textContent = "ISEN Yncréa Ouest - Nantes";
+        profileCard.appendChild(affiliation)
+        let email = document.createElement("div");//créer une div
+        email.classList.add("email");//ajouter la classe email à la div
+        email.textContent = nameText+"[at]isen-ouest.ycnrea.fr";
+        profileCard.appendChild(email);
 
-            let name = document.createElement("div");//créer une div
-            name.classList.add("name");//ajouter la classe name à la div
-            let nameText = prompt('Entrez le nom du nouveau membre');
-            name.textContent = nameText;
-            profileCard.appendChild(name);
-
-
-            let title = document.createElement("div");//créer une div
-            title.classList.add("title");//ajouter la classe title à la div
-            title.textContent = "Nouveau membre";
-            profileCard.appendChild(title);
-
-            let affiliation = document.createElement("div");//créer une div
-            affiliation.classList.add("affiliation");//ajouter la classe affiliation à la div
-            affiliation.textContent = "ISEN Yncréa Ouest - Nantes";
-            profileCard.appendChild(affiliation);
-
-            let email = document.createElement("div");//créer une div
-            email.classList.add("email");//ajouter la classe email à la div
-            email.textContent = nameText+"[at]isen-ouest.ycnrea.fr";
-            profileCard.appendChild(email);
-    
-            let button = document.createElement("button");//créer un bouton
-            button.classList.add("button");//ajouter la classe button au bouton
-            button.textContent = "Supprimer le membre";
-            button.addEventListener('click', function(){//ajouter un évènement au bouton
-                supprimerMembre();
-            }
-            );
-            profileCard.appendChild(button);
-
-            let contactInfo = document.createElement("div");//créer une div
-            contactInfo.classList.add("contact-info");//ajouter la classe contact-info à la div
-
-            profileCard.appendChild(contactInfo);//ajouter la div à la div profile-card
-            document.body.appendChild(profileCard);//ajouter la div profile-card au corps de la page
-
-            let container = document.getElementsByClassName('container')[0];//récupérer la div container
-            container.appendChild(profileCard);//ajouter la div profile-card à la div container
+        let button = document.createElement("button");//créer un bouton
+        button.classList.add("button");//ajouter la classe button au bouton
+        button.textContent = "Supprimer le membre";
+        button.addEventListener('click', function(){//ajouter un évènement au bouton
+            supprimerMembre();
+        }
+        );
+        profileCard.appendChild(button);//ajouter le bouton à la div profile-car
+        let contactInfo = document.createElement("div");//créer une div
+        contactInfo.classList.add("contact-info");//ajouter la classe contact-info à la di
+        profileCard.appendChild(contactInfo);//ajouter la div à la div profile-card
+        document.body.appendChild(profileCard);//ajouter la div profile-card au corps de la pag
+        let container = document.getElementsByClassName('container')[0];//récupérer la div container
+        container.appendChild(profileCard);//ajouter la div profile-card à la div container
     }
 
 
@@ -163,10 +148,18 @@ function supprimerMembre(){
     profileCard.remove();
 }
 
-//pied de page et onglet
 
 
-//page 1 accueil
+
+
+
+
+
+
+
+
+
+
 
 
     
@@ -175,6 +168,38 @@ function copyplagia(){
         alert('Attention au plagiat');
       }
   )}; 
+  
+
+//Page thematique de recherche 
+function container(){
+    let showButton = document.getElementById('modal-btn'); //On récupère l'id du bouton pour ouvrir la fenêtre modale
+    let container = document.getElementById('modal-container'); //On récupère l'id de la fenetre modale
+    let closebtn = document.getElementById('close-btn');//On recupère l'id du bouton pour fermer la fenetre modale
+    let showButton2 = document.getElementById('modal-btn2');
+    let container2 = document.getElementById('modal-container2');
+    let closebtn2 = document.getElementById('close-btn2')
+    showButton.addEventListener('click', () => { // Si il y a un click sur le bouton
+        container.showModal(); //ouvre la fenetre modal
+        //agrandir la fenetre modal pour qu'elle prenne toute la page
+        container.style.width = "100%";
+        container.style.height = "100%";
+        container.style.margin = "0";
+    });
+    closebtn.addEventListener('click', () => {
+        container.close(); // Ferme la fenetre modal
+    });
+
+    showButton2.addEventListener('click', () => {
+        container2.showModal(); //ouvre la fenetre modal
+    });
+    closebtn2.addEventListener('click', () => {
+        container2.close(); // Ferme la fenetre modal
+    });
+  }
+container();
+
+
+
   
 
 
@@ -201,12 +226,12 @@ function namefiltre() {
 
 function  titrefiltre(){
     let input = document.getElementById("myInput2");
-    let filter = input.value.toUpperCase();
+    let filter = input.value.toUpperCase();//on prend le texte recherché sans tenir compte de la casse ou des accents
     let table = document.getElementsByClassName("publi")[0];
     let tr = table.getElementsByTagName("tr");
   
-    for (i = 0; i < tr.length; i++) {//pour chaque ligne de la table
-      td = tr[i].getElementsByTagName("td")[1];//on prend la 3eme colonne
+    for (i = 0; i < tr.length; i++) {// boucle parcourt toute les lignes de la table.
+      td = tr[i].getElementsByTagName("td")[1];//on cherche la colonne
       if (td) {//si la colonne existe
         txtValue = td.textContent || td.innerText;//on prend le texte de la colonne
         if (txtValue.toUpperCase().indexOf(filter) > -1) {//si le nom de l'auteur contient le texte recherché
@@ -218,14 +243,14 @@ function  titrefiltre(){
     }
 }
 
-//cherche parmis les id des publications com_congre ou article et effacer les autres qui n'ont  pas le meme id
 
 
 
 
-//Page 4 Contactez nous
 
-// Projet 
+
+
+
 function changeImage(){
   let image = document.getElementById('img0');
   let image1 = document.getElementById('img1');
@@ -242,7 +267,7 @@ function changeImage(){
       image2.src="https://blog.cdn.own3d.tv/resize=fit:crop,height:400,width:600/MO4UcY4SR1K6AnShORk4"
   });
   image3.addEventListener('click', () => {
-      image3.src="https://pbs.twimg.com/media/FKg65fvWQAYNcj-.jpg"
+      image3.src="https://pbs.twimg.com/media/Euq-wexWQAABqnP?format=jpg&name=large"
   });
 }
 changeImage();

@@ -20,3 +20,6 @@ function testFooter() {
 function testPages1() {
     animateText();
 }
+function contacttest() {
+    validate();
+}
