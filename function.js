@@ -171,7 +171,7 @@ function copyplagia(){
   
 
 //Page thematique de recherche 
-function container(){
+/*function container(){
     let showButton = document.getElementById('modal-btn'); //On récupère l'id du bouton pour ouvrir la fenêtre modale
     let container = document.getElementById('modal-container'); //On récupère l'id de la fenetre modale
     let closebtn = document.getElementById('close-btn');//On recupère l'id du bouton pour fermer la fenetre modale
@@ -197,7 +197,7 @@ function container(){
     });
   }
 container();
-
+*/
 
 
   
