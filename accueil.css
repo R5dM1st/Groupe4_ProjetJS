@@ -206,10 +206,10 @@ main {
 #textetrantition {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-70%, -70%);
 
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   white-space: nowrap;
   overflow: hidden;
   animation: move 2s ease-in-out infinite;

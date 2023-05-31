@@ -7,16 +7,17 @@ function loader(){//affiche le loader pendant 2 secondes
 }
 
 function copy() {
-  document.addEventListener('copy', function(e) {
-      if (e) {
-          e.preventDefault();
-          console.log('Le plagiat est interdit');
+  document.addEventListener('copy', function(e) {//si on copie quelque chose
+      if (e) {//si l'évènement existe
+          e.preventDefault();//on empêche le comportement par défaut
+          alert('Le plagiat est interdit');
       }
   });
 }
 
 
 function horloge(){
+    //ajoute un chronomètre qui compte le temps passé sur la page
     let chrono = document.getElementsByClassName('timer')[0];
     let time = -2;
     chrono.innerHTML = time;
@@ -25,10 +26,10 @@ function horloge(){
         chrono.innerHTML = time;
     }
     , 1000);
-    //ajouter une horloge qui indique l'heure 
+    //ajoute une horloge qui indique l'heure 
     let horloge = document.getElementsByClassName('clock')[0];
-    setInterval(function(){
-        date = new Date();
+    setInterval(function(){//fonction qui se répète toutes les secondes
+        date = new Date();//récupère la date
         heure = date.getHours();
         minute = date.getMinutes();
         seconde = date.getSeconds();
@@ -46,7 +47,7 @@ function horloge(){
 
 
 //pages 3 Membre
-function confirmMembre() {
+function confirmMembre() {//affiche une boite de dialogue pour confirmer l'accès à la page membre
   event.preventDefault();//empêche le comportement par défaut du bouton pour pouvoir afficher la boite de dialogue
   
   let confirmation = confirm("Êtes-vous sûr de vouloir accéder à la page des membres ?");
@@ -71,7 +72,7 @@ function modeEdition() {//mode édition pour modifier les noms des membres
     alert('Vous êtes en mode édition');
   
     let names = document.getElementsByClassName('name');//récupérer les noms de la classe name
-    Array.from(names).forEach(function(name) {//pour chaque nom de la classe name on crée un input
+    Array.from(names).forEach(function(name) {//pour chaque nom de la classe name on crée un input de l'input on utilise Array car on ne peut pas utiliser forEach sur un HTMLCollection(qui est une liste d'éléments)
       let nom = name.innerHTML;//on récupère le texte du nom
       let input = document.createElement('input');
       input.type = 'text';
@@ -80,8 +81,8 @@ function modeEdition() {//mode édition pour modifier les noms des membres
       name.appendChild(input);
     });
   
-    document.addEventListener('keyup', function(event) {
-      if (event && event.keyCode === 13) {
+    document.addEventListener('keyup', function(event) {//si on appuie sur entrée on valide les changements
+      if (event && event.keyCode === 13) {//si l'évènement existe et que la touche appuyée est entrer
         let inputs = document.getElementsByTagName('input');
         Array.from(inputs).forEach(function(input) {//pour chaque input on crée un span avec le texte de l'input on utilise Array car on ne peut pas utiliser forEach sur un HTMLCollection(qui est une liste d'éléments)
           let name = input.value;
@@ -163,12 +164,6 @@ function supprimerMembre(){
 
 
     
-function copyplagia(){
-    document.addEventListener('copy', (event) => {
-        alert('Attention au plagiat');
-      }
-  )}; 
-  
 
 //Page thematique de recherche 
 /*function container(){
@@ -282,9 +277,9 @@ function valide(){
     document.getElementById('valider').style.backgroundColor = "red";
   }
   else{
-    //affiche le bouton en vert si les champs sont remplis directement quand on click sur le bouton
+
     document.getElementById('valider').style.backgroundColor = "green";
-    //wait 2 secondes avant de jouer au jeu 
+
       jeu();
 
   
@@ -294,12 +289,13 @@ function valide(){
 
 function jeu(){
   let choix = prompt('Choisissez entre pierre, feuille ou ciseaux');
-  let choixOrdi = Math.random();
-  if (choixOrdi < 0.34) {
+  //math.random() renvoie un nombre aléatoire entre 1,2,3
+  let choixOrdi = Math.floor(Math.random() * 3) + 1;
+  if (choixOrdi = 1) {
       choixOrdi = 'pierre';
-  } else if(choixOrdi <= 0.67) {
+  } else if(choixOrdi = 2) {
       choixOrdi = 'feuille';
-  } else {
+  } else if(choixOrdi = 3){
       choixOrdi = 'ciseaux';
   }
   alert('L\'ordinateur a choisi '+choixOrdi);
